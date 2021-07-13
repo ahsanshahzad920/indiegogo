@@ -1,0 +1,1665 @@
+@import "colors";
+@import "fonts";
+@import "carousel";
+
+// buttons
+.btn {
+  padding       : 10px 12px;
+  letter-spacing: 2px;
+  border-radius : 2px;
+}
+
+.btn-pink {
+  background-color: $primary-color;
+  color           : $white-color !important;
+  text-transform  : uppercase;
+  font-size       : 12px;
+  font-weight     : 700;
+  font-family     : $Benton-sans-font;
+  text-decoration : none !important;
+
+  &:hover {
+    color           : $white-color;
+    background-color: $primary-dark-color;
+  }
+}
+
+.btn-blue {
+  background-color: $blue-color;
+  color           : $white-color !important;
+  text-transform  : uppercase;
+  font-size       : 12px;
+  font-weight     : 700;
+  font-family     : $Benton-sans-font;
+  text-decoration : none !important;
+
+  &:hover {
+    color           : $white-color;
+    background-color: $blue-color;
+  }
+}
+
+.btn-facebook {
+  background-color: #4267B2;
+  color           : $white-color !important;
+  text-transform  : uppercase;
+  font-size       : 12px;
+  font-weight     : 700;
+  font-family     : $Benton-sans-font;
+  text-decoration : none !important;
+  border          : 2px solid #4267B2;
+  padding         : 10px 18px;
+
+  .fa {
+    font-size: 16px;
+  }
+
+  &:hover {
+    color           : $white-color;
+    background-color: #4267B2;
+  }
+}
+
+.btn-twitter {
+  background-color: #1DA1F2;
+  color           : $white-color !important;
+  text-transform  : uppercase;
+  font-size       : 12px;
+  font-weight     : 700;
+  font-family     : $Benton-sans-font;
+  text-decoration : none !important;
+  border          : 2px solid #1DA1F2;
+  padding         : 10px 16px;
+
+  .fa {
+    font-size: 16px;
+  }
+
+  &:hover {
+    color           : $white-color;
+    background-color: #1DA1F2;
+  }
+}
+
+.btn-white {
+  color         : $primary-color;
+  border        : 1px solid $light-color;
+  text-transform: uppercase;
+  font-size     : 12px;
+  font-family   : $Benton-sans-font;
+
+  &:hover {
+    color : $primary-color;
+    border: 1px solid $gray-light-color;
+  }
+}
+
+.btn-gray-outline {
+  color      : $secondary-color;
+  font-size  : 12px;
+  border     : 1px solid $light-color;
+  font-family: $Benton-sans-font;
+
+  &:hover {
+    color           : $secondary-color;
+    background-color: $gray-color;
+  }
+}
+
+.btn-pink-outline {
+  color      : $primary-color;
+  font-size  : 12px;
+  border     : 3px solid $primary-color;
+  font-family: $Benton-sans-font;
+  font-weight: 900;
+
+  &:hover {
+    color           : $white-color;
+    background-color: $primary-color;
+  }
+}
+
+// buttons
+
+// Common CSS
+.left-right-padding {
+  padding-left : 5%;
+  padding-right: 5%;
+}
+
+.bg-gray {
+  background-color: $gray-color;
+}
+
+.bg-dark {
+  background-color: $secondary-color;
+}
+
+// Common CSS
+
+// navbar
+
+.bg-nav {
+  background-color: $white-color;
+}
+
+.border-bottom-nav {
+  border-bottom: 1px solid rgba(42, 42, 42, 0.3);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color      : $secondary-color;
+  font-size  : 16px;
+  font-weight: 700;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.navbar-brand {
+  font-size     : 24px;
+  font-weight   : bold;
+  text-transform: uppercase;
+  color         : $primary-color !important;
+  font-family   : $Times-roman-font;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+// Dropdown
+.dropdown,
+.dropleft,
+.dropright,
+.dropup {
+  position: unset;
+}
+
+.dropdown-menu {
+  min-width    : 100%;
+  border-radius: 0px;
+  margin       : -1px 0 0;
+  padding      : 0px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.rotate {
+  -moz-transition   : all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition        : all 0.3s linear;
+}
+
+.rotate.down {
+  -moz-transform   : rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform        : rotate(180deg);
+  position         : relative;
+  top              : 2px;
+}
+
+.dropdown-link-sec {
+  font-family: $Benton-sans-font;
+
+  a {
+    padding  : 3px 0px;
+    display  : block;
+    font-size: 14px;
+    color    : $secondary-color;
+  }
+}
+
+.links-with-image {
+  font-family: $Benton-sans-font;
+
+  a {
+    color      : $secondary-color;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Dropdown
+
+// search box
+.openBtn {
+  border: none;
+  cursor: pointer;
+}
+
+.overlay-content {
+  position  : relative;
+  width     : 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin    : auto;
+}
+
+.overlay-search {
+  height          : 62px;
+  width           : 100%;
+  display         : none;
+  position        : fixed;
+  z-index         : 1;
+  top             : 0;
+  left            : 0;
+  background-color: $white-color;
+
+  .closebtn {
+    position : absolute;
+    top      : -15px;
+    right    : 45px;
+    font-size: 50px;
+    cursor   : pointer;
+    color    : $secondary-color;
+    z-index  : 1;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  input[type="text"] {
+    padding   : 18px;
+    font-size : 17px;
+    border    : none;
+    float     : left;
+    width     : 95%;
+    background: white;
+
+    &:hover {
+      outline: none;
+    }
+  }
+
+  button {
+    float     : left;
+    width     : 5%;
+    padding   : 18px 0px 18px 18px;
+    background: $white-color;
+    font-size : 17px;
+    border    : none;
+    cursor    : pointer;
+  }
+}
+
+// search box
+
+// navbar
+
+/* Slider */
+.slider-sec {
+  position: relative;
+}
+
+.over-slider {
+  position   : absolute;
+  top        : 75px;
+  right      : 0;
+  width      : 600px;
+  padding    : 80px 80px 80px 40px;
+  font-family: $Benton-sans-font;
+
+  h2 {
+    color: $secondary-color;
+  }
+
+  p {
+    padding: 10px 0px;
+  }
+}
+
+/* Slider */
+
+// Popular Projects Sec
+.popular-projects {
+
+  .card {
+    border-radius: 2px;
+    margin-bottom: 10px;
+
+    &:hover {
+      position  : relative;
+      bottom    : 1px;
+      transition: 0.3s;
+      box-shadow: 0.3px 0.3px 3px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .card-body {
+    padding: 1.25rem 1.25rem 0.25rem 1.25rem;
+  }
+
+  .funding {
+    color    : $success-color;
+    font-size: 14px;
+  }
+
+  .save-for-later {
+    color: $light-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .title-link {
+    color: $secondary-color;
+  }
+
+  .card-text {
+    color    : $gray-light-color;
+    font-size: 14px;
+  }
+
+  .project-link {
+    color    : $gray-light-color;
+    font-size: 14px;
+
+    &:hover {
+      color          : $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  .progress {
+    height: 0.5rem;
+  }
+
+  .progress-bar {
+    background-color: $light-success-color;
+  }
+
+  .price {
+    color        : $secondary-color;
+    font-weight  : 500;
+    margin-bottom: 2px;
+
+    span {
+      color    : $gray-light-color;
+      font-size: 12px;
+    }
+  }
+
+  .persentage {
+    color        : $gray-light-color;
+    margin-bottom: 2px;
+    font-size    : 12px;
+  }
+
+  /* The colour of the indicators */
+  .carousel-inner img {
+    width : 100%;
+    height: auto;
+  }
+
+  .carousel-indicators {
+    left  : 0;
+    top   : auto;
+    bottom: -40px;
+  }
+
+  .carousel-indicators li {
+    border-radius: 50%;
+    width        : 8px;
+    height       : 8px;
+  }
+
+  .carousel-indicators .active {
+    background: #707070;
+  }
+
+  .pre-icon,
+  .next-icon {
+    color: $secondary-color;
+
+    &:hover {
+      color          : $secondary-color;
+      text-decoration: none;
+    }
+  }
+
+  /* Multi Slider */
+}
+
+// Popular Projects Sec
+
+// big-picture Sec
+.big-picture {
+  font-family: $Benton-sans-font;
+
+  .left-right-padding {
+    padding-left : 5%;
+    padding-right: 5%;
+  }
+
+  .image-img {
+    position  : relative;
+    text-align: center;
+  }
+
+  .text-on-image {
+    color    : $white-color;
+    position : absolute;
+    top      : 47%;
+    left     : 30%;
+    transform: translate(-20%, -47%);
+  }
+
+  .caption {
+    color      : $secondary-color;
+    font-weight: 700;
+  }
+
+  .see-collection {
+    color         : $secondary-color;
+    font-size     : 12px;
+    font-weight   : 700;
+    letter-spacing: 1px;
+
+    &:hover {
+      color          : $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// big-picture Sec
+
+// back-the-project
+.back-the-project {
+  position   : relative;
+  color      : $secondary-color;
+  font-family: $Benton-sans-font;
+
+  .text-over-image {
+    position : absolute;
+    top      : 47%;
+    left     : 50%;
+    transform: translate(-50%, -47%);
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  a {
+    display       : block;
+    text-align    : center;
+    font-size     : 16px;
+    color         : $secondary-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight   : 500;
+
+    &:hover {
+      color          : $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// back-the-project
+
+// categories-interest
+.categories-interest {
+  font-family: $Benton-sans-font;
+
+  .left-right-padding {
+    padding-left : 5%;
+    padding-right: 5%;
+  }
+
+  .bg-on-hover {
+    background-color: $white-color;
+
+    &:hover {
+      background-color: $gray-color;
+    }
+  }
+
+  a {
+    color         : $secondary-color;
+    text-transform: uppercase;
+    font-size     : 12px;
+    letter-spacing: 1px;
+
+    p {
+      padding-top: 10px;
+    }
+
+    &:hover {
+      background-color: $gray-color;
+      text-decoration : none;
+    }
+  }
+}
+
+// categories-interest
+
+// codegame-eview
+.codegame-eview {
+  font-family: $Benton-sans-font;
+
+  .left-right-padding {
+    padding-left : 5%;
+    padding-right: 5%;
+  }
+
+  .card {
+    border: none;
+
+    .card-title {
+      color: $secondary-color;
+    }
+
+    .card-text {
+      color: $gray-light-color;
+    }
+
+    .read-more {
+      color         : $secondary-color;
+      font-size     : 12px;
+      font-weight   : 700;
+      letter-spacing: 1px;
+
+      &:hover {
+        color          : $primary-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// codegame-eview
+
+// Clever Things
+.clever-things {
+  font-family: $Benton-sans-font;
+
+  .left-right-padding {
+    padding-left : 5%;
+    padding-right: 5%;
+  }
+
+  .image-part {
+    background-image : url(../images/cleaver-things.png);
+    background-size  : contain;
+    background-repeat: no-repeat;
+
+    p {
+      padding-left : 18%;
+      padding-right: 18%;
+    }
+  }
+}
+
+// Clever Things
+
+// Footer
+.footer-sec {
+  font-family: $Benton-sans-font;
+
+  select {
+    padding: 5px 8px;
+  }
+
+  a {
+    display  : block;
+    color    : $secondary-color;
+    font-size: 14px;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  input {
+    outline: none;
+    padding: 10px;
+  }
+
+  .terms-policy {
+    color  : $primary-color;
+    display: inline;
+  }
+
+  .social-links {
+    display: inline;
+    color  : $secondary-color;
+    padding: 0px 15px;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .policy-links {
+    display  : inline;
+    color    : $secondary-color;
+    padding  : 0px 5px;
+    font-size: 12px;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Footer
+
+// What We DO Page
+
+// Main
+.what-we-do-main {
+  font-family: $Benton-sans-font;
+
+  .image-img {
+    position  : relative;
+    text-align: center;
+
+    img {
+      height: 400px;
+    }
+  }
+
+  .text-on-image {
+    text-align: center;
+    color     : $secondary-color;
+    position  : absolute;
+    top       : 275px;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+  }
+}
+
+// Main
+
+// youtube-video-sec
+
+.youtube-video-sec {
+  font-family: $Benton-sans-font;
+}
+
+// youtube-video-sec
+
+// Great Finds
+
+.great-finds-sec {
+  font-family: $Benton-sans-font;
+
+  input {
+    padding: 8px 15% 9px 10px;
+    outline: none;
+    border : 1px solid $light-color;
+  }
+
+  a {
+    color          : $secondary-color;
+    font-size      : 14px;
+    text-decoration: underline;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// Great Finds
+
+// favorite-campaigns
+.favorite-campaigns {
+  font-family: $Benton-sans-font;
+
+  .left-right-padding {
+    padding-left : 5%;
+    padding-right: 5%;
+  }
+
+  .text-left {
+    a {
+      color          : $gray-light-color;
+      text-decoration: dotted;
+    }
+  }
+}
+
+// favorite-campaigns
+
+// Ready-explore
+
+.Ready-explore {
+  font-family: $Benton-sans-font;
+
+  .left-right-padding {
+    padding-left : 5%;
+    padding-right: 5%;
+  }
+}
+
+// Ready-explore
+
+// What We DO Page
+
+// start-a-campaign page
+
+// welcome-to-codegame
+.welcome-to-codegame {
+  font-family: $Benton-sans-font;
+
+  a {
+    color: $gray-light-color;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .card {
+    img {
+      -webkit-filter: grayscale(100%);
+      filter        : grayscale(100%);
+
+      &:hover {
+        -webkit-filter: grayscale(0%);
+        filter        : grayscale(0%);
+        transition    : 0.5s;
+      }
+    }
+  }
+}
+
+// welcome-to-codegame
+
+// start-a-campaign page
+
+// Login Modal
+#loginModal {
+  font-family: $Benton-sans-font;
+
+  .modal-header {
+    border-bottom: none;
+    padding      : 10px 15px 0px 15px;
+  }
+
+  input {
+    padding      : 10px 10px;
+    border       : 1px solid $gray-color;
+    margin-bottom: 10px;
+
+    &:focus {
+      border: 1px solid $secondary-color;
+    }
+  }
+
+  a {
+    color          : $secondary-color;
+    text-decoration: underline;
+    font-size      : 12px;
+    font-weight    : 800;
+
+    &:hover {
+      color     : $primary-color;
+      transition: 0.5s;
+    }
+  }
+
+  .or {
+    color      : $gray-light-color;
+    padding-top: 10px;
+  }
+
+  .post-permission {
+    color      : $gray-light-color;
+    font-size  : 14px;
+    padding-top: 5px;
+  }
+}
+
+// Login Modal
+// Login Modal
+#signUpModal {
+  font-family: $Benton-sans-font;
+
+  .modal-header {
+    border-bottom: none;
+    padding      : 10px 15px 0px 15px;
+  }
+
+  input {
+    padding      : 10px 10px;
+    border       : 1px solid $gray-color;
+    margin-bottom: 10px;
+
+    &:focus {
+      border: 1px solid $secondary-color;
+    }
+  }
+
+  a {
+    color          : $secondary-color;
+    text-decoration: underline;
+    font-size      : 12px;
+    font-weight    : 800;
+
+    &:hover {
+      color     : $primary-color;
+      transition: 0.5s;
+    }
+  }
+
+  .or {
+    color      : $gray-light-color;
+    padding-top: 10px;
+  }
+
+  .post-permission {
+    color      : $gray-light-color;
+    font-size  : 14px;
+    padding-top: 5px;
+  }
+}
+
+// Login Modal
+
+// password-reset
+.password-reset {
+  font-family: $Benton-sans-font;
+
+  input {
+    padding: 6px;
+  }
+}
+
+// password-reset
+
+// For Enterprenures
+#navbarForEnterprenures {
+  .dropdown-toggle::after {
+    display: inline-block;
+  }
+
+  // Dropdown
+  .dropdown,
+  .dropleft,
+  .dropright,
+  .dropup {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    min-width    : auto;
+    border-radius: 0px;
+    margin       : -1px 0 0;
+    padding      : 0px;
+  }
+
+  .dropdown-toggle::after {
+    display: inline-block;
+  }
+}
+
+.slider-two {
+  .over-slider {
+    padding: 50px 80px 50px 40px;
+  }
+}
+
+.dream-it {
+  font-family: $Benton-sans-font;
+
+  a {
+    color         : $primary-color;
+    font-size     : 14px;
+    font-weight   : 500;
+    letter-spacing: 1px;
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
+.explore-the-experts-directory {
+  font-family: $Benton-sans-font;
+}
+
+.experts-help {
+  font-family: $Benton-sans-font;
+
+  .bg-on-hover {
+    border: 1px solid $light-color;
+    height: 180px;
+
+    img {
+      padding-top: 10px;
+    }
+
+    a {
+      color: $secondary-color;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.start-your-business {
+  font-family: $Benton-sans-font;
+  color      : $white-color;
+}
+
+.ready-to-go {
+  font-family: $Benton-sans-font;
+
+  .bg-on-hover {
+    border: 1px solid $light-color;
+    height: 300px;
+
+    img {
+      padding-top: 10px;
+    }
+
+    a {
+      color         : $primary-color;
+      text-transform: uppercase;
+      font-weight   : 600;
+      font-size     : 14px;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      p {
+        color         : $secondary-color;
+        text-transform: initial;
+        font-weight   : normal;
+        font-size     : 16px;
+      }
+    }
+  }
+}
+
+.success-stories {
+  font-family: $Benton-sans-font;
+
+  a {
+    color: $primary-color;
+  }
+}
+
+.project-by-project {
+  font-family: $Benton-sans-font;
+
+  h2 {
+    color: $primary-color;
+  }
+
+  .title {
+    color: $secondary-color;
+  }
+}
+
+// For Enterprenures
+
+// Explore All Page
+#tech-innovation a,
+#creative-works a,
+#community-projects a {
+  display       : block;
+  padding-bottom: 8px;
+}
+
+/* Rotate Icon */
+.animate-icon {
+  -moz-transition   : all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition        : all 0.3s linear;
+}
+
+.rotate-icon {
+  -moz-transform   : rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform        : rotate(180deg);
+  position         : relative;
+  top              : 3px;
+}
+
+/* Rotate Icon */
+
+.result {
+  position: relative;
+}
+
+.result input {
+  padding: 8px 35px;
+  outline: none;
+}
+
+.result .search-icon {
+  position: absolute;
+  left    : 15px;
+  top     : 8px;
+}
+
+.result .times-icon {
+  position: absolute;
+  right   : 15px;
+  top     : 8px;
+}
+
+.result select {
+  padding: 6px;
+}
+
+.codegame-campaigns {
+  font-family: $Benton-sans-font;
+
+  a {
+    color: $secondary-color;
+
+    .active {
+      color: $primary-color;
+    }
+  }
+}
+
+.codegame-campaigns-main {
+  font-family: $Benton-sans-font;
+
+  .image-img {
+    position  : relative;
+    text-align: center;
+
+    img {
+      height: 250px;
+    }
+  }
+
+  .text-on-image {
+    text-align: center;
+    color     : $white-color;
+    position  : absolute;
+    top       : 200px;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+  }
+}
+
+// Explore All Page
+
+
+// campaign-collections page
+.campaign-collections {
+  font-family: $Benton-sans-font;
+
+  .card {
+    border-radius: 2px;
+
+    .card-img-top {
+      height: 300px;
+    }
+
+    &:hover {
+      position  : relative;
+      bottom    : 1px;
+      transition: 0.3s;
+      box-shadow: 0.3px 0.3px 3px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .card-body {
+    padding: 1.25rem 1.25rem 0.25rem 1.25rem;
+  }
+
+  .funding {
+    color      : $success-color;
+    font-size  : 16px;
+    font-weight: 600;
+  }
+
+  .save-for-later {
+    color: $light-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .title-link {
+    color      : $secondary-color;
+    font-size  : 20px;
+    font-weight: 600;
+  }
+
+  .card-text {
+    color    : $gray-light-color;
+    font-size: 14px;
+  }
+
+  .project-link {
+    color    : $gray-light-color;
+    font-size: 14px;
+
+    &:hover {
+      color          : $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  .progress {
+    height: 0.5rem;
+  }
+
+  .progress-bar {
+    background-color: $light-success-color;
+  }
+
+  .price {
+    color        : $secondary-color;
+    font-weight  : 500;
+    margin-bottom: 2px;
+
+    span {
+      color    : $gray-light-color;
+      font-size: 12px;
+    }
+  }
+
+  .persentage {
+    color        : $gray-light-color;
+    margin-bottom: 2px;
+    font-size    : 12px;
+  }
+
+}
+
+// campaign-collections page
+
+
+// Project Page
+
+// projects-show
+.projects-show {
+  font-family: $Benton-sans-font;
+
+  .projects-show-text {
+    .funding {
+      color: $success-color;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .description {
+      color: $secondary-color;
+    }
+
+    .company {
+      position: relative;
+
+      img {
+        position: absolute;
+        top     : 5px;
+      }
+
+      p {
+        position: relative;
+        left    : 45px;
+      }
+
+      a {
+        color: $secondary-color;
+      }
+    }
+
+    .price {
+      color      : $secondary-color;
+      font-weight: 900;
+
+      span {
+        font-weight: normal;
+        font-size  : 12px;
+      }
+    }
+
+    .persentage {
+      color: $secondary-color;
+    }
+
+    .persentage-of-persentage {
+      color: $secondary-color;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    .social-icon {
+      a {
+        color     : $secondary-color;
+        opacity   : 0.5;
+        transition: 0.5s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .progress {
+      height: 0.6rem;
+    }
+
+    .progress-bar {
+      background-color: $light-success-color;
+    }
+  }
+
+}
+
+// projects-show
+
+// project tabs
+.project-tabs {
+  font-family: $Benton-sans-font;
+
+  .nav-tabs {
+    border-bottom : none;
+    padding-bottom: 15px;
+
+    a {
+      text-transform: uppercase;
+      margin-right  : 20px;
+      color         : $secondary-color;
+
+      &:hover {
+        padding-bottom : 5px;
+        border-bottom  : 2px solid $gray-light-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .active {
+    padding-bottom: 5px;
+    font-weight   : 600;
+    border-bottom : 2px solid $secondary-color;
+  }
+
+  .learn-more {
+    color      : $secondary-color;
+    font-weight: 600;
+  }
+
+  .story-text {
+    font-weight: normal;
+  }
+
+  .icon-link {
+    color  : $secondary-color;
+    opacity: 0.5;
+  }
+
+  #comments {
+    .coment-sec {
+      img {
+        position     : absolute;
+        border-radius: 50px;
+        width        : 60px;
+      }
+
+      p {
+        padding-left: 80px;
+        font-weight : normal;
+        color       : $gray-light-color;
+
+        .name {
+          color      : $secondary-color;
+          font-weight: 700;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        .like {
+          color    : $primary-color;
+          font-size: 22px;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        .dislike {
+          color    : $blue-color;
+          font-size: 22px;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .login {
+      color: $secondary-color;
+    }
+  }
+
+  // Stepper
+  .md-stepper-horizontal {
+    display         : table;
+    width           : 100%;
+    margin          : 0 auto;
+    background-color: #FFFFFF;
+    /* box-shadow   : 0 3px 8px -6px rgba(0, 0, 0, .50); */
+  }
+
+  .md-stepper-horizontal .md-step {
+    display : table-cell;
+    position: relative;
+    padding : 24px 0px 0px 0px;
+  }
+
+  .md-stepper-horizontal .md-step:active {
+    border-radius: 15% / 75%;
+  }
+
+  .md-stepper-horizontal .md-step:first-child:active {
+    border-top-left-radius   : 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .md-stepper-horizontal .md-step:last-child:active {
+    border-top-right-radius   : 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .md-stepper-horizontal .md-step:hover .md-step-circle {
+    background-color: #757575;
+  }
+
+  .md-stepper-horizontal .md-step:first-child .md-step-bar-left,
+  .md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+    display: none;
+  }
+
+  .md-stepper-horizontal .md-step .md-step-circle {
+    width           : 30px;
+    height          : 30px;
+    margin          : 0 auto;
+    background-color: #999999;
+    border-radius   : 50%;
+    text-align      : center;
+    line-height     : 30px;
+    font-size       : 16px;
+    font-weight     : 600;
+    color           : #FFFFFF;
+  }
+
+  .md-step-circle.black {
+    background-color: #000000 !important;
+  }
+
+  .md-step-circle.green {
+    background-color: #088366 !important;
+  }
+
+
+  .md-stepper-horizontal .md-step .md-step-title {
+    margin-top : 16px;
+    font-size  : 16px;
+    font-weight: 600;
+  }
+
+  .md-stepper-horizontal .md-step .md-step-title,
+  .md-stepper-horizontal .md-step .md-step-optional {
+    text-align: center;
+  }
+
+  .md-stepper-horizontal .md-step .md-step-title.black {
+    color: rgb(0, 0, 0) !important;
+  }
+
+  .md-stepper-horizontal .md-step .md-step-title.green {
+    color: rgb(8, 131, 102) !important;
+  }
+
+  .md-stepper-horizontal .md-step.active .md-step-title {
+    font-weight: 600;
+    color      : rgba(0, 0, 0, .87);
+  }
+
+  .md-stepper-horizontal .md-step .md-step-optional {
+    font-size: 12px;
+  }
+
+  .md-stepper-horizontal .md-step.active .md-step-optional {
+    color: rgba(0, 0, 0, .54);
+  }
+
+  .md-stepper-horizontal .md-step .md-step-bar-left,
+  .md-stepper-horizontal .md-step .md-step-bar-right {
+    position  : absolute;
+    top       : 36px;
+    height    : 1px;
+    border-top: 1px solid #DDDDDD;
+  }
+
+  .md-stepper-horizontal .md-step .md-step-bar-right {
+    right      : 0;
+    left       : 50%;
+    margin-left: 20px;
+  }
+
+  .md-stepper-horizontal .md-step .md-step-bar-left {
+    left        : 0;
+    right       : 50%;
+    margin-right: 20px;
+  }
+
+  // Stepper
+}
+
+// project tabs
+
+// Project Page
+
+
+// Payment page
+
+// payment-sec
+.payment-sec {
+  font-family: $Benton-sans-font;
+
+  .red {
+    color: $primary-color;
+  }
+
+  .title {
+    color: $gray-light-color;
+  }
+
+  .sub-title {
+    color: $secondary-color;
+  }
+
+  .back-link {
+    color     : $secondary-color;
+    transition: 0.3s;
+
+    &:hover {
+      color          : $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  .login {
+    color: $secondary-color;
+  }
+
+  .policy {
+    color: $primary-color;
+  }
+
+  label {
+    padding-top: 8px;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  input {
+    padding: 8px 12px;
+    outline: none;
+    border : 1px solid $gray-light-color;
+  }
+
+  .tip {
+    p {
+      font-weight: bold;
+    }
+  }
+}
+
+// payment-sec
+
+// Payment page
+
+
+// about-us page
+.about-us {
+  font-family: $Benton-sans-font;
+
+  a {
+    display       : block;
+    color         : $primary-color;
+    font-weight   : 500;
+    padding-bottom: 5px;
+  }
+
+  p {
+    font-size     : 18px;
+    letter-spacing: 1px;
+  }
+
+  .first-bg {
+    background-image: url(../images/about-us.jpg);
+    background-size : cover;
+    height          : 100vh;
+
+    h2 {
+      color      : $white-color;
+      padding-top: 45vh;
+    }
+  }
+
+  .second-bg {
+    background-image: url(../images/about-us-two.jpg);
+    background-size : cover;
+    height          : 60vh;
+
+    h2 {
+      color      : $white-color;
+      padding-top: 30vh;
+    }
+  }
+
+  .bg-gray {
+    h1 {
+      color: $primary-color;
+    }
+  }
+
+  .bg-white {
+    a {
+      display       : inline;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+// about-us page
+
+// blog page
+.blog {
+  .blog-link {
+    color: $secondary-color;
+  }
+}
+
+// blog page
+
+// about-us page
+.carrer {
+  font-family: $Benton-sans-font;
+
+  a {
+    display       : block;
+    color         : $primary-color;
+    font-weight   : 500;
+    padding-bottom: 5px;
+  }
+
+  p {
+    font-size     : 18px;
+    letter-spacing: 1px;
+  }
+
+  .first-bg {
+    background-image: url(../images/carrer.png);
+    background-size : 100% 100%;
+    height          : 60vh;
+
+    h2 {
+      color      : $white-color;
+      padding-top: 25vh;
+    }
+
+    p {
+      color: $white-color;
+    }
+  }
+
+  .second-bg {
+    background-image: url(../images/about-us-two.jpg);
+    background-size : cover;
+    height          : 60vh;
+
+    h2 {
+      color      : $white-color;
+      padding-top: 30vh;
+    }
+  }
+
+  .bg-gray {
+    h1 {
+      color: $primary-color;
+    }
+  }
+
+  .bg-white {
+    a {
+      display       : inline;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+// about-us page

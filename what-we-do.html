@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/responsive.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav border-bottom-nav">
+
+        <!-- Login Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome back!</h3>
+                            <p>Log in to continue.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <div class="text-right pb-4">
+                                <a href="password-reset.html">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>New to codegame? <a href="#" data-toggle="modal" data-target="#signUpModal"
+                                        data-dismiss="modal">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Login Modal -->
+
+
+        <!--Sign Up  Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome!</h3>
+                            <p>Sign up to join codegame.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">First Name</label>
+                            <input type="text" class="btn-block" placeholder="Your First Name">
+                            <label for="">Last Name</label>
+                            <input type="text" class="btn-block" placeholder="Your Last Name">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <p><input type="checkbox"> Sign me up for the codegame newsletter</p>
+                            <p><input type="checkbox" checked> I agree to the <a href="#">Terms of Use</a>
+                                and have read and understand the
+                                <a href="#">Privacy Policy</a>
+                            </p>
+                            <div class="text-right pb-4">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>Already have an account? <a href="#" data-toggle="modal" data-target="#loginModal"
+                                        data-dismiss="modal">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sign Up Modal -->
+
+        <!-- Search box -->
+        <div id="myOverlay" class="overlay-search">
+            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+            <div class="overlay-content">
+                <form>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+            </div>
+        </div>
+        <!-- Search box -->
+
+        <a class="navbar-brand" href="index.html">Code Game</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Dropdown menu explore -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle rotate-class" href="index.html" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Explore <i class="fa fa-chevron-down rotate"></i>
+                    </a>
+                    <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="links-with-image py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <a href="explore-all.html">Explore All Projects
+                                            <img src="./images/dropdown_banner_2x.png" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Our Top 10 Finds
+                                            <img src="./images/dropdown 2.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Team Favorites
+                                            <img src="./images/dropdown 3.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">InDemand Stars
+                                            <img src="./images/dropdown 4.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Join the Convo
+                                            <img src="./images/dropdown 5.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-link-sec bg-gray py-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">TECH & INNOVATION</a>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <a href="#">Audio</a>
+                                                <a href="#">Camera Gear</a>
+                                                <a href="#">Education</a>
+                                                <a href="#">Energy & Green Tech</a>
+                                                <a href="#">Fashion & Wearables</a>
+                                                <a href="#">Food & Beverages</a>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#">Health & Fitness</a>
+                                                <a href="#">Home</a>
+                                                <a href="#">Phones & Accessories</a>
+                                                <a href="#">Productivity</a>
+                                                <a href="#">Transportation</a>
+                                                <a href="#">Travel & Outdoors</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">CREATIVE WORKS</a>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <a href="#">Art</a>
+                                                <a href="#">Comics</a>
+                                                <a href="#">Dance & Theater</a>
+                                                <a href="#">Film</a>
+                                                <a href="#">Music</a>
+                                                <a href="#">Photography</a>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#">Podcasts, Blogs & Vlogs</a>
+                                                <a href="#">Tabletop Games</a>
+                                                <a href="#">Video Games</a>
+                                                <a href="#">Web Series & TV Shows</a>
+                                                <a href="#">Writing & Publishing</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">COMMUNITY PROJECTS</a>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <a href="#">Culture</a>
+                                                <a href="#">Environment</a>
+                                                <a href="#">Human Rights</a>
+                                                <a href="#">Local Businesses</a>
+                                                <a href="#">Wellness</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <!-- Dropdown menu explore -->
+                <li class="nav-item">
+                    <a class="nav-link" href="what-we-do.html">What We Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link openBtn" href="#" onclick="openSearch()"><i class="fa fa-search"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="for-entrepreneur.html">For Entrepreneurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="start-a-campaign.html">Start a Campaign</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border-left" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- What We Do Main Sec -->
+    <div class="what-we-do-main">
+        <div class="image-img">
+            <img src="./images/what-we-do.png" alt="" class="w-100">
+        </div>
+        <div class="text-on-image">
+            <h1>Get the tech that gets people talking</h1>
+            <p>
+                With both live crowdfunding campaigns and innovative products shipping now, there’s no better place to
+                start the hunt for cool and clever innovations that surprise and delight. codegame is where new
+                launches.
+            </p>
+        </div>
+    </div>
+    <!-- What We Do Main Sec -->
+
+    <!-- Video Sec -->
+    <div class="youtube-video-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 pt-5">
+                    <div class="embed-responsive embed-responsive-16by9 ">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2Tz_C14M6z0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="py-3">Fund the next big thing</h1>
+                        <p>
+                            codegame's crowdfunding campaigns are where new and groundbreaking products take flight,
+                            sometimes long before they hit mainstream availability. With thousands of campaigns
+                            launching every week, there's great tech, design, and much more around every corner — often
+                            with limited-time perks and pricing for the earliest backers. Before it's everywhere, it's
+                            on codegame.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="text-center">
+                        <h1 class="py-3">Join the journey from idea to market</h1>
+                        <img src="./images/timeline_desktop.png" alt="" class="w-75">
+                        <p>
+                            With codegame, you have the opportunity to support entrepreneurs and new technology from
+                            the earliest stages of development. Be sure to evaluate every campaign closely and
+                            contribute at a level you can afford in the event that the team is unable to complete the
+                            project as planned. <br><br>
+                            Browse campaigns, read the stories from the entrepreneurs themselves, evaluate the stage of
+                            development and any potential production risks — and then fund the projects that you want to
+                            help succeed.
+                        </p>
+                        <a href="#" class="btn btn-pink-outline">EXPLORE PROJECTS</a>
+                        <p class="py-4">Or learn more about crowdfunding and your role as a backer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Video Sec -->
+
+    <!-- Great finds -->
+    <div class="great-finds-sec bg-gray">
+        <div class="container py-5">
+            <div class="row text-center">
+                <div class="col-lg-10 offset-lg-1">
+                    <h1 class="py-4">Great finds, delivered daily</h1>
+                    <p>
+                        We surface the best and brightest of codegame in our newsletter. Sign up to find out about
+                        great technology, design, film, and much more — all before it hits the mainstream.
+                    </p>
+                    <div class="col-lg-12">
+                        <input type="text" placeholder="Your email address">
+                        <a href="#" class="btn btn-pink">sign up now</a>
+                    </div>
+                    <p class="py-2"><input type="checkbox"> I agree to the
+                        <a href="#" class="terms-policy">Terms of Use</a> and have read and understand the
+                        <a href="#" class="terms-policy">Privacy Policy.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Great finds -->
+
+
+    <!-- favorite campaigns -->
+    <div class="favorite-campaigns">
+        <div class="left-right-padding py-5">
+            <div class="text-center">
+                <h3 class="pb-4">Just a few of our favorite campaigns</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="text-center">
+                        <img src="./images/misfit.png" alt="">
+                        <h4 class="pt-3">Misfit Shine</h4>
+                        <p>7,957 Backers</p>
+                    </div>
+                    <div class="text-left">
+                        With super-smart fitness technology squeezed into a sleek, take-it-anywhere design, the Misfit
+                        Shine was a huge hit. Today it’s available in stores everywhere, but codegame backers were in
+                        on the action first.
+                        <p><img src="./images/fire.png" alt="">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom"
+                                title="Popular Projects that have successfully hit thier funding goal but are still avai to back, often with early-bird discount.">InDemand</a>
+                            Campaign
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="text-center">
+                        <img src="./images/bluesmart.png" alt="">
+                        <h4 class="pt-3">Bluesmart</h4>
+                        <p>7,957 Backers</p>
+                    </div>
+                    <div class="text-left">
+                        This smash-hit campaign almost singlehandedly invented the smart suitcase as the must-have
+                        travel accessory that it is today. With innovative features like location tracking and a
+                        built-in scale, Bluesmart went big on codegame before landing in stores around the world.
+                        <p><img src="./images/fire.png" alt="">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom"
+                                title="Popular Projects that have successfully hit thier funding goal but are still avai to back, often with early-bird discount.">InDemand</a>
+                            Campaign
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="text-center">
+                        <img src="./images/evapolar.png" alt="">
+                        <h4 class="pt-3">Evapolar</h4>
+                        <p>7,957 Backers</p>
+                    </div>
+                    <div class="text-left">
+                        The Evapolar team’s slick air conditioner is small enough to place exactly where you need it
+                        most. It even cleans and humidifies as it cools. The campaign was so successful that the team
+                        came back to codegame to launch the next-gen version.
+                        <p><img src="./images/fire.png" alt="">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom"
+                                title="Popular Projects that have successfully hit thier funding goal but are still avai to back, often with early-bird discount.">InDemand</a>
+                            Campaign
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="text-center">
+                        <img src="./images/super_troopers.png" alt="">
+                        <h4 class="pt-3">Super Troopers 2</h4>
+                        <p>7,957 Backers</p>
+                    </div>
+                    <div class="text-left">
+                        With its truly gigantic backer community, Super Troopers 2 became one of the most iconic
+                        codegame film projects. The team behind the project offered backers everything from movie
+                        tickets to an actual police car from the film!
+                        <p><img src="./images/fire.png" alt="">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom"
+                                title="Popular Projects that have successfully hit thier funding goal but are still avai to back, often with early-bird discount.">InDemand</a>
+                            Campaign
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- favorite campaigns -->
+    <!-- Ready-explore -->
+    <div class="Ready-explore">
+        <div class="left-right-padding py-5">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 py-5">
+                    <div class="text-center">
+                        <img src="./images/bike.png" alt="">
+                        <h1 class="py-3">Ready? Explore</h1>
+                        <a href="#" class="btn btn-pink-outline">DISCOVER PROJECTS</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 py-5">
+                    <div class="text-center border-left">
+                        <img src="./images/chackers.png" alt="">
+                        <h1 class="py-3">Feeling Inspired?</h1>
+                        <a href="#" class="btn btn-pink-outline"> BECOME AN ENTREPRENEUR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ready-explore -->
+
+    <!-- Footer Start -->
+    <div class="footer-sec bg-gray">
+        <div class="left-right-padding py-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>EXPLORE</h6>
+                    <a href="what-we-do.html">What We Do</a>
+                    <a href="#">Funding</a>
+                    <a href="#">GoFundMe</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ABOUT</h6>
+                    <a href="#">About Us</a>
+                    <a href="#">Trust & Safety</a>
+                    <a href="#">Help & Support</a>
+                    <a href="#">Press</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ENTREPRENEURS</h6>
+                    <a href="#">codegame vs. Kickstarter</a>
+                    <a href="#">Education Center</a>
+                    <a href="#">Experts Directory</a>
+                    <a href="#">Fees</a>
+                    <a href="#">Enterprise</a>
+                    <a href="#">China</a>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                    <div class="text-center">
+                        <img src="./images/leter.png" alt="">
+                        <h5>Find it first on codegame</h5>
+                        <p>Discover new and clever products in the codegame newsletter</p>
+                        <input type="text" placeholder="Your email address" class="btn-block">
+                    </div>
+                    <div class="text-left">
+                        <p class="py-2"><input type="checkbox"> I agree to the
+                            <a href="#" class="terms-policy">Terms of Use</a> and have read and understand the
+                            <a href="#" class="terms-policy">Privacy Policy.</a>
+                        </p>
+                        <a href="#" class="btn btn-pink">sign up now</a>
+                    </div>
+                </div>
+                <div class="col-lg-12 py-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-gray-outline px-4" data-toggle="modal"
+                        data-target="#currencyModal">
+                        Select Currency
+                    </button>
+
+                    <a href="#" class="social-links"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-linkedin"></i></a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="currencyModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Currency Settings</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Changing the currency will allow you to view estimates of the campaign goal and
+                                        contribution amounts in the currency you choose.
+                                        <br><br>
+                                        You will still be charged in the campaign’s original currency. The amount
+                                        charged by your card issuer in your local currency may differ from our estimate,
+                                        based on their exchange rate and any applicable fees.
+                                    </p>
+                                    <select>
+                                        <option>UAE Dirham (AED)</option>
+                                        <option>$ US Dollar (USD)</option>
+                                        <option>Do not convert currency</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-white  mr-3" data-dismiss="modal">Cancel</a>
+                                    <a href="#" class="btn btn-pink px-4">Save</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                    <div class="text-right">
+                        <a href="#" class="policy-links">Terms of Use</a>
+                        <a href="#" class="policy-links">Privacy Policy</a>
+                        <a href="#" class="policy-links">Cookie Policy</a>
+                        <a href="#" class="policy-links disabled">© <span id="year"></span>
+                            codegame, Inc. All RightsReserved
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

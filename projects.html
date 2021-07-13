@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codegame</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/responsive.css">
+    <link rel="stylesheet" href="./scss/lightslider.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="./js/lightslider.js"></script>
+    <script src="./js/slider-js.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav border-bottom-nav">
+
+        <!-- Login Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome back!</h3>
+                            <p>Log in to continue.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <div class="text-right pb-4">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>New to codegame? <a href="#" data-toggle="modal" data-target="#signUpModal"
+                                        data-dismiss="modal">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Login Modal -->
+
+
+        <!--Sign Up  Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome!</h3>
+                            <p>Sign up to join codegame.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">First Name</label>
+                            <input type="text" class="btn-block" placeholder="Your First Name">
+                            <label for="">Last Name</label>
+                            <input type="text" class="btn-block" placeholder="Your Last Name">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <p><input type="checkbox"> Sign me up for the codegame newsletter</p>
+                            <p><input type="checkbox" checked> I agree to the <a href="#">Terms of Use</a>
+                                and have read and understand the
+                                <a href="#">Privacy Policy</a>
+                            </p>
+                            <div class="text-right pb-4">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>Already have an account? <a href="#" data-toggle="modal" data-target="#loginModal"
+                                        data-dismiss="modal">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sign Up Modal -->
+
+        <!-- Search box -->
+        <div id="myOverlay" class="overlay-search">
+            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+            <div class="overlay-content">
+                <form>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+            </div>
+        </div>
+        <!-- Search box -->
+
+        <a class="navbar-brand" href="index.html">codegame</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Dropdown menu explore -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle rotate-class" href="index.html" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Explore <i class="fa fa-chevron-down rotate"></i>
+                    </a>
+                    <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="links-with-image py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <a href="explore-all.html">Explore All Projects
+                                            <img src="./images/dropdown_banner_2x.png" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Our Top 10 Finds
+                                            <img src="./images/dropdown 2.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Team Favorites
+                                            <img src="./images/dropdown 3.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">InDemand Stars
+                                            <img src="./images/dropdown 4.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Join the Convo
+                                            <img src="./images/dropdown 5.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-link-sec bg-gray py-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">TECH & INNOVATION</a>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <a href="#">Audio</a>
+                                                <a href="#">Camera Gear</a>
+                                                <a href="#">Education</a>
+                                                <a href="#">Energy & Green Tech</a>
+                                                <a href="#">Fashion & Wearables</a>
+                                                <a href="#">Food & Beverages</a>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#">Health & Fitness</a>
+                                                <a href="#">Home</a>
+                                                <a href="#">Phones & Accessories</a>
+                                                <a href="#">Productivity</a>
+                                                <a href="#">Transportation</a>
+                                                <a href="#">Travel & Outdoors</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">CREATIVE WORKS</a>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <a href="#">Art</a>
+                                                <a href="#">Comics</a>
+                                                <a href="#">Dance & Theater</a>
+                                                <a href="#">Film</a>
+                                                <a href="#">Music</a>
+                                                <a href="#">Photography</a>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#">Podcasts, Blogs & Vlogs</a>
+                                                <a href="#">Tabletop Games</a>
+                                                <a href="#">Video Games</a>
+                                                <a href="#">Web Series & TV Shows</a>
+                                                <a href="#">Writing & Publishing</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">COMMUNITY PROJECTS</a>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <a href="#">Culture</a>
+                                                <a href="#">Environment</a>
+                                                <a href="#">Human Rights</a>
+                                                <a href="#">Local Businesses</a>
+                                                <a href="#">Wellness</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <!-- Dropdown menu explore -->
+                <li class="nav-item">
+                    <a class="nav-link" href="what-we-do.html">What We Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link openBtn" href="#" onclick="openSearch()"><i class="fa fa-search"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="for-entrepreneur.html">For Entrepreneurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="start-a-campaign.html">Start a Campaign</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border-left" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Popular Projects Sec Start-->
+    <div class="projects-show py-5">
+        <div class="left-right-padding">
+
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="demo">
+                        <div class="item">
+                            <div class="clearfix">
+                                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                    <li data-thumb="./images/light-slider-thimble-5.jpg">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item"
+                                                src="https://www.youtube.com/embed/L91d7BET4dM"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </li>
+                                    <li data-thumb="./images/light-slider-thimble-1.jpg">
+                                        <img src="./images/light-slider-1.jpg" class="w-100" />
+                                    </li>
+                                    <li data-thumb="./images/light-slider-thimble-2.jpg">
+                                        <img src="./images/light-slider-2.jpg" />
+                                    </li>
+                                    <li data-thumb="./images/light-slider-thimble-3.jpg">
+                                        <img src="./images/light-slider-3.jpg" />
+                                    </li>
+                                    <li data-thumb="./images/light-slider-thimble-4.jpg">
+                                        <img src="./images/light-slider-4.jpg" />
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="projects-show-text">
+                        <a href="#" class="funding">FUNDING</a>
+                        <h2>GoSun Chillest: Solar Cooler That Doesn’t Need Ice</h2>
+                        <p class="description">
+                            45L cooler with 2 refrigeration zones. Keeps your food cold for 10+ hours.
+                            No ice needed, ever.
+                        </p>
+                        <div class="company">
+                            <img src="./images/GoSun.png" alt="" target="_blank">
+                            <p>
+                                <a href="https://www.gosun.co/" class="btn-block">GoSun Inc.</a>
+                                9 Campaigns | Cincinnati, United States
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <p class="price">$161,036 <span>USD raised</span></p>
+                            </div>
+                            <div class="col-lg-4 text-right">
+                                <p class="persentage">839 backers</p>
+                            </div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                aria-valuemax="100" style="width:70%">
+                                <span class="sr-only">70% Complete</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <p class="persentage-of-persentage">
+                                    4788% of $15,000 <span>Flexible Goal</span>
+                                </p>
+                            </div>
+                            <div class="col-lg-4 text-right">
+                                <p class="hours">27 hours left</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <a href="index.html" class="btn btn-pink">back it</a>
+                                <a href="index.html" class="btn btn-gray-outline"><i class="fa fa-heart-o"></i>
+                                    follow</a>
+                            </div>
+                            <div class="col-lg-4 text-right social-icon">
+                                <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                                <a href="#"><i class="fa fa-link fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="project-tabs">
+                        <ul class="nav nav-tabs">
+                            <li><a data-toggle="tab" href="#story">story</a></li>
+                            <li><a data-toggle="tab" href="#faq">faq</a></li>
+                            <li><a data-toggle="tab" href="#updates">updates</a></li>
+                            <li><a data-toggle="tab" href="#comments">comments</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="story" class="tab-pane fade in active show">
+                                <div class="border p-3">
+                                    <p>
+                                        Prototype
+                                    </p>
+                                    <p class="story-text">
+                                        The project team has a working demo, not the final product. Their ability to
+                                        begin production may be affected by product development or financial challenges.
+                                        <a href="#" class="learn-more">Learn More</a>
+                                    </p>
+                                    <div class="md-stepper-horizontal">
+                                        <div class="md-step done">
+                                            <div class="md-step-circle black"><span><i class="fa fa-check"></i></span>
+                                            </div>
+                                            <div class="md-step-title black">Concept</div>
+                                            <div class="md-step-bar-left"></div>
+                                            <div class="md-step-bar-right"></div>
+                                        </div>
+                                        <div class="md-step editable">
+                                            <div class="md-step-circle green"><span><i class="fa fa-wrench"></i></span>
+                                            </div>
+                                            <div class="md-step-title green">Prototype</div>
+                                            <!-- <div class="md-step-optional">Optional</div> -->
+                                            <div class="md-step-bar-left"></div>
+                                            <div class="md-step-bar-right"></div>
+                                        </div>
+                                        <div class="md-step">
+                                            <div class="md-step-circle"><span><i class="fa fa-table"></i></span></div>
+                                            <div class="md-step-title">Production</div>
+                                            <div class="md-step-bar-left"></div>
+                                            <div class="md-step-bar-right"></div>
+                                        </div>
+                                        <div class="md-step">
+                                            <div class="md-step-circle"><span><i class="fa fa-truck"></i></span></div>
+                                            <div class="md-step-title">Shipping</div>
+                                            <div class="md-step-bar-left"></div>
+                                            <div class="md-step-bar-right"></div>
+                                        </div>
+                                    </div>
+                                    <p class="mt-4">
+                                        <a href="#" class="icon-link pr-3"><i class="fa fa-star"></i> Fashion-Forward
+                                            Finds</a>
+                                        <a href="#" class="icon-link"><i class="fa fa-flag"></i> 4 Projects</a>
+                                    </p>
+                                </div>
+                                <img src="./images/introducing-gosun.jpg" alt="" class="w-100">
+                                <img src="./images/no-more-ice.jpg" alt="" class="w-100">
+                                <p>Say goodbye to soggy sandwiches and melted ice! GoSun Chillest is the ultimate
+                                    outdoor cooler because instead of using ice, it cools food and drinks using the
+                                    power of the Sun. </p>
+                                <img src="./images/6-WM.jpg" alt="" class="w-100">
+                                <p>The 45 Liter cooler prepares you for any outdoor event with a built-in battery and
+                                    all-terrain wheels plus thoughtful extras like inside lighting, tie down straps and
+                                    organization baskets. It also has a built-in compressor that lets you set the
+                                    temperature right where you want it with a range from -4°F to 68°F (-20°C to 20°C).
+                                </p>
+                            </div>
+                            <div id="faq" class="tab-pane fade">
+                                <h3>Frequently Asked Questions</h3>
+                                <h4>How long does the Built-In Battery last?</h4>
+                                <p>
+                                    The integrated 100WH battery can run the Chillest with cold drinks (42°F) on one
+                                    charge for 10 hours at an outside temperature of 80°F. Generally, when using the
+                                    Elbow Solar Table in the ProPack, you can maintain charge in the battery.
+                                </p>
+                                <h4>How much electricity does it use?</h4>
+                                <p>
+                                    The Chillest uses only about 45 watts when the compressor is running. The compressor
+                                    cycles on and off depending on three main factors: 1) your pre-set temperature 2)
+                                    the temperature and mass of the contents inside 3) the outside ambient temperature
+                                </p>
+                                <h4>How does it work?</h4>
+                                <p>
+                                    GoSun Chillest works similar to your household fridge, but much more efficient. A
+                                    brushless compressor circulates refrigerant through a condenser coil (hot side) and
+                                    an evaporator coil (cold side) which is embedded in an insulated chamber.
+                                </p>
+                                <h4>Can I use Chillest in my car?</h4>
+                                <p>
+                                    GoSun Chillest is able to be powered by typical 12 V cigarette ports in the car,
+                                    boat or RV or with the Extra PowerBank. It can also be run with the included AC
+                                    adapter. The Chillest has three modes for battery protection to prevent depletion
+                                    through an integrated LVD (low voltage disconnect).
+                                </p>
+                                <h4>Can I order multiple items with my pledge?</h4>
+                                <p>
+                                    We work to provide the best pricing and package combinations, but we can't make
+                                    every imaginable combo. There will be an opportunity to purchase additional units
+                                    and accessories during the Add-on Survey sent out before delivery.
+                                </p>
+                                <h4>Can I ship a double order to multiple locations?</h4>
+                                <p>
+                                    Our logistics are good, but not that good. You'll have to receive both units at one
+                                    address or make two separate orders, perhaps using two logins.
+                                </p>
+                                <h4>Does International Shipping cover VAT's?</h4>
+                                <p>
+                                    GoSun has backers from all over the world, and shipping fees vary from country to
+                                    country. We have no control over these charges and cannot predict what they may be.
+                                    For this reason, the international shipping cost typically does not cover VATs but
+                                    only covers the cost of delivery to the address provided.
+                                </p>
+                                <h4>
+                                    How long does it take to charge the Built-In Battery with the Elbow Solar Table?
+                                </h4>
+                                <p>
+                                    This is definitely weather dependent and it will help if you're able to adjust the
+                                    solar panel to be perpendicular to the Sun every hour or so. Under full sunlight you
+                                    should be able to recharge a depleted battery in about four or five hours.
+                                </p>
+                            </div>
+                            <div id="updates" class="tab-pane fade">
+                                <div class="border p-3">
+                                    <div class="company">
+                                        <p>
+                                            <a href="#"><img src="./images/by-ampere.png" alt="" target="_blank"></a>
+                                            by Ampere
+                                            May 27, 2021 • 10:17PM
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <h3>533% of our goal before the sun set!</h3>
+                                    <p>
+                                        WOW! As the first dawn-dusk 24-hour cycle comes to a close we have been
+                                        absolutely BLOWN away by the support! With more than 300 backers, we are 514%
+                                        funded as we approach $100,000 in funding! <b>THANK YOU!</b>
+                                    </p>
+                                    <img src="./images/update-1.jpg" alt="" class="w-100">
+                                    <p>
+                                        With summer on the way, we honestly couldn't be more excited to get you Dusk.
+                                        You see, Chase and I are sunglasses guys ourselves. Chase has always got a pair
+                                        on and I would always be wearing a pair if I wasn't always losing mine (exactly
+                                        why I need Dusk’s Find My tracking feature)... you can probably guess who’s who
+                                        in the image below…
+                                    </p>
+                                    <img src="./images/update-2.jpg" alt="" class="w-100">
+                                    <p>
+                                        I remember this epic boat day back in April 2018. We were out on the water all
+                                        day — a beautiful sunny day, not a cloud in the sky — perfect day to wear
+                                        polarized sunglasses. And then, at Dusk, the sun started to come down. Still too
+                                        bright with the sun reflecting on the water to take your sunglasses off, but too
+                                        dark for the full tint daytime lenses. If only there was a better option…
+                                    </p>
+                                    <p>
+                                        The vision for Dusk is years in the making. Thank you for daring to dream big,
+                                        for investing in things that have never been done before, and for helping bring
+                                        our fun, functional tech dreams to life!
+                                        <br>
+                                        Enough nostalgia and on to a few housekeeping items:
+                                    </p>
+                                    <ol>
+                                        <li>Survey</li>
+                                        <li>Refer a friend</li>
+                                        <li>Shipping</li>
+                                    </ol>
+                                    <h3>Survey:</h3>
+                                    <p>
+
+                                        Check your inboxes as we’ve sent you a short, but mandatory pre-fulfillment
+                                        questionnaire. Or click the link below.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="comments" class="tab-pane fade">
+                                <div class="border p-3">
+                                    You must have an account to comment. Already have an account?
+                                    <a href="#" class="login">Log in</a>
+                                </div>
+                                <div class="coment-sec pt-3">
+                                    <img src="./images//coment.png" alt="">
+                                    <p>
+                                        <a href="#" class="name">Tanuj Bhojwani</a> <span>7 hours ago</span>
+                                        <br>
+                                        Hi, I am interested in the prescription version. Please let me know if this
+                                        stretch goal has been unlocked. Additionally please also let me know the
+                                        technical details about the prescription lenses (eg min/max prescription,
+                                        astigmatism correction, and lens refractive index). Thanks!
+                                        <br>
+                                        <a href="#" class="like mr-3"><i class="fa fa-thumbs-up "></i> 0</a>
+                                        <a href="#" class="dislike"><i class="fa fa-thumbs-down"></i> 1</a>
+                                    </p>
+                                </div>
+                                <div class="coment-sec pt-3">
+                                    <img src="./images//coment.png" alt="">
+                                    <p>
+                                        <a href="#" class="name">Bobby Chan</a> <span>4 hours ago</span>
+                                        <br>
+                                        How do I add the rechargeable case? I don’t see an option for it any add on
+                                        item.
+                                        <br>
+                                        <a href="#" class="like mr-3"><i class="fa fa-thumbs-up "></i> 0</a>
+                                        <a href="#" class="dislike"><i class="fa fa-thumbs-down"></i> 1</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 px-5">
+                    <p>Select a perk</p>
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="./images/light-slider-3.jpg" alt="" class="w-100">
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-pink mb-3">FEATURED</a>
+
+                                <h5>Dusk | Super Early Bird</h5>
+                                <h4>$249 USD <span>$399 USD (37% OFF)</span></h4>
+                                <p>
+                                    1 x pair of Dusk — the app-enabled electrochromic smart sunglasses Save $150 with
+                                    IGG
+                                    only
+                                    discount. ⭐ Guaranteed Delivery (worldwide) ⭐ 1-Year Warranty ⭐ Available on IGG
+                                    ONLY. |
+                                    Shipping charged at time of shipping. Costs start at $8 (USA). See Country Shipping
+                                    Table
+                                    for estimates.
+                                </p>
+
+                                <span>
+                                    Included Items
+                                    <ul>
+                                        <li>Dusk</li>
+                                    </ul>
+                                </span>
+                                <p>Estimated Shipping</p>
+                                <p>August 2021</p>
+                                <p>Only 5 left</p>
+                                <p>Ships worldwide.</p>
+                                <div class="text-center">
+                                    <a href="selection.html" class="btn btn-gray-outline">GET THIS PERK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Popular Projects Sec End-->
+
+    <!-- Footer Start -->
+    <div class="footer-sec bg-gray">
+        <div class="left-right-padding py-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>EXPLORE</h6>
+                    <a href="what-we-do.html">What We Do</a>
+                    <a href="#">Funding</a>
+                    <a href="#">GoFundMe</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ABOUT</h6>
+                    <a href="#">About Us</a>
+                    <a href="#">Trust & Safety</a>
+                    <a href="#">Help & Support</a>
+                    <a href="#">Press</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ENTREPRENEURS</h6>
+                    <a href="#">codegame vs. Kickstarter</a>
+                    <a href="#">Education Center</a>
+                    <a href="#">Experts Directory</a>
+                    <a href="#">Fees</a>
+                    <a href="#">Enterprise</a>
+                    <a href="#">China</a>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                    <div class="text-center">
+                        <img src="./images/leter.png" alt="">
+                        <h5>Find it first on codegame</h5>
+                        <p>Discover new and clever products in the codegame newsletter</p>
+                        <input type="text" placeholder="Your email address" class="btn-block">
+                    </div>
+                    <div class="text-left">
+                        <p class="py-2"><input type="checkbox"> I agree to the
+                            <a href="#" class="terms-policy">Terms of Use</a> and have read and understand the
+                            <a href="#" class="terms-policy">Privacy Policy.</a>
+                        </p>
+                        <a href="#" class="btn btn-pink">sign up now</a>
+                    </div>
+                </div>
+                <div class="col-lg-12 py-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-gray-outline px-4" data-toggle="modal"
+                        data-target="#currencyModal">
+                        Select Currency
+                    </button>
+
+                    <a href="#" class="social-links"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-linkedin"></i></a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="currencyModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Currency Settings</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Changing the currency will allow you to view estimates of the campaign goal and
+                                        contribution amounts in the currency you choose.
+                                        <br><br>
+                                        You will still be charged in the campaign’s original currency. The amount
+                                        charged by your card issuer in your local currency may differ from our estimate,
+                                        based on their exchange rate and any applicable fees.
+                                    </p>
+                                    <select>
+                                        <option>UAE Dirham (AED)</option>
+                                        <option>$ US Dollar (USD)</option>
+                                        <option>Do not convert currency</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-white  mr-3" data-dismiss="modal">Cancel</a>
+                                    <a href="#" class="btn btn-pink px-4">Save</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                    <div class="text-right">
+                        <a href="#" class="policy-links">Terms of Use</a>
+                        <a href="#" class="policy-links">Privacy Policy</a>
+                        <a href="#" class="policy-links">Cookie Policy</a>
+                        <a href="#" class="policy-links disabled">© <span id="year"></span>
+                            codegame, Inc. All RightsReserved
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Times-new-roman-bold;
+    src        : url(../fonts/TimesNewRoman/times-new-roman.ttf);
+}
+
+@font-face {
+    font-family: BentonSansRegular;
+    src        : url(../fonts/BentonSans/BentonSansRegular.otf);
+}
+
+
+
+$Benton-sans-font: "BentonSansRegular";
+$Times-roman-font: "Times-new-roman-bold";

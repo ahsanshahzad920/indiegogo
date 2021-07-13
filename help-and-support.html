@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/responsive.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav border-bottom-nav">
+
+        <!-- Login Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome back!</h3>
+                            <p>Log in to continue.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <div class="text-right pb-4">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>New to codegame? <a href="#">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Login Modal -->
+
+
+        <!--Sign Up  Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome!</h3>
+                            <p>Sign up to join codegame.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">First Name</label>
+                            <input type="text" class="btn-block" placeholder="Your First Name">
+                            <label for="">Last Name</label>
+                            <input type="text" class="btn-block" placeholder="Your Last Name">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <p><input type="checkbox"> Sign me up for the codegame newsletter</p>
+                            <p><input type="checkbox" checked> I agree to the <a href="#">Terms of Use</a>
+                                and have read and understand the
+                                <a href="#">Privacy Policy</a>
+                            </p>
+                            <div class="text-right pb-4">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>Already have an account? <a href="#">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sign Up Modal -->
+
+        <a class="navbar-brand" href="index.html">Code Game</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarForEnterprenures"
+            aria-controls="navbarForEnterprenures" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarForEnterprenures">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="how-it-works" data-toggle="dropdown">How It
+                        Works</a>
+                    <div class="dropdown-menu" aria-labelledby="how-it-works">
+                        <a class="dropdown-item" href="#">Campaign</a>
+                        <a class="dropdown-item" href="#">InDemand</a>
+                        <a class="dropdown-item" href="#">China Program</a>
+                        <a class="dropdown-item" href="#">Fees</a>
+                        <a class="dropdown-item" href="#">Community</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="resources" data-toggle="dropdown">
+                        Resources
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="resources">
+                        <a class="dropdown-item" href="#">Education Center</a>
+                        <a class="dropdown-item" href="#">Experts Directory</a>
+                        <a class="dropdown-item" href="#">Help & Support</a>
+                        <a class="dropdown-item" href="#">Trust & Safety</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="about-us" data-toggle="dropdown">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="about-us">
+                        <a class="dropdown-item" href="#">codegame vs. Kickstarter</a>
+                        <a class="dropdown-item" href="#">Press</a>
+                        <a class="dropdown-item" href="#">About Us</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">For Entrepreneurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="start-a-campaign.html">Start a Campaign</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border-left" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Project by project, -->
+    <div class="project-by-project">
+        <div class="left-right-padding bg-gray py-5 text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 pb-4">
+                    <h2 class="title">
+                        How may we help you?
+                    </h2>
+                    <input type="text" placeholder="Search our help articles" class="btn-block py-2 px-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project by project, -->
+
+    <!-- Ready To Go -->
+    <div class="ready-to-go">
+        <div class="left-right-padding py-5 text-center">
+            <div class="row pt-4">
+                <div class="col-sm-3 pb-3">
+                    <div class="bg-on-hover p-3">
+                        <a href="#">
+                            <img src="./images/start-compaign.png" alt="">
+                            <div class="text-center">
+                                <p>
+                                    <b>Backers</b> <br>
+                                    Find out how to evaluate and back crowdfunding campaigns, and manage your orders
+                                </p>
+                                <a href="#">view all</a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3 pb-3">
+                    <div class="bg-on-hover p-3">
+                        <a href="#">
+                            <img src="./images/start-compaign.png" alt="">
+                            <div class="text-center">
+                                <p>
+                                    <b>Campaigns</b> <br>
+                                    Find out how to evaluate and back crowdfunding campaigns, and manage your orders
+                                </p>
+                                <a href="#">view all</a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3 pb-3">
+                    <div class="bg-on-hover p-3">
+                        <a href="#">
+                            <img src="./images/start-compaign.png" alt="">
+                            <div class="text-center">
+                                <p>
+                                    <b>Payments</b> <br>
+                                    Find out how to evaluate and back crowdfunding campaigns, and manage your orders
+                                </p>
+                                <a href="#">view all</a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3 pb-3">
+                    <div class="bg-on-hover p-3">
+                        <a href="#">
+                            <img src="./images/start-compaign.png" alt="">
+                            <div class="text-center">
+                                <p>
+                                    <b>Trust Operations</b> <br>
+                                    Find out how to evaluate and back crowdfunding campaigns, and manage your orders
+                                </p>
+                                <a href="#">view all</a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ready To Go End -->
+
+
+    <!-- Footer Start -->
+    <div class="footer-sec bg-gray">
+        <div class="left-right-padding py-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>EXPLORE</h6>
+                    <a href="what-we-do.html">What We Do</a>
+                    <a href="#">Funding</a>
+                    <a href="#">GoFundMe</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ABOUT</h6>
+                    <a href="#">About Us</a>
+                    <a href="#">Trust & Safety</a>
+                    <a href="#">Help & Support</a>
+                    <a href="#">Press</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ENTREPRENEURS</h6>
+                    <a href="#">codegame vs. Kickstarter</a>
+                    <a href="#">Education Center</a>
+                    <a href="#">Experts Directory</a>
+                    <a href="#">Fees</a>
+                    <a href="#">Enterprise</a>
+                    <a href="#">China</a>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                    <div class="text-center">
+                        <img src="./images/leter.png" alt="">
+                        <h5>Find it first on codegame</h5>
+                        <p>Discover new and clever products in the codegame newsletter</p>
+                        <input type="text" placeholder="Your email address" class="btn-block">
+                    </div>
+                    <div class="text-left">
+                        <p class="py-2"><input type="checkbox"> I agree to the
+                            <a href="#" class="terms-policy">Terms of Use</a> and have read and understand the
+                            <a href="#" class="terms-policy">Privacy Policy.</a>
+                        </p>
+                        <a href="#" class="btn btn-pink">sign up now</a>
+                    </div>
+                </div>
+                <div class="col-lg-12 py-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-gray-outline px-4" data-toggle="modal"
+                        data-target="#currencyModal">
+                        Select Currency
+                    </button>
+
+                    <a href="#" class="social-links"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-linkedin"></i></a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="currencyModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Currency Settings</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Changing the currency will allow you to view estimates of the campaign goal and
+                                        contribution amounts in the currency you choose.
+                                        <br><br>
+                                        You will still be charged in the campaign’s original currency. The amount
+                                        charged by your card issuer in your local currency may differ from our estimate,
+                                        based on their exchange rate and any applicable fees.
+                                    </p>
+                                    <select>
+                                        <option>UAE Dirham (AED)</option>
+                                        <option>$ US Dollar (USD)</option>
+                                        <option>Do not convert currency</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-white  mr-3" data-dismiss="modal">Cancel</a>
+                                    <a href="#" class="btn btn-pink px-4">Save</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                    <div class="text-right">
+                        <a href="#" class="policy-links">Terms of Use</a>
+                        <a href="#" class="policy-links">Privacy Policy</a>
+                        <a href="#" class="policy-links">Cookie Policy</a>
+                        <a href="#" class="policy-links disabled">© <span id="year"></span>
+                            codegame, Inc. All RightsReserved
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/app-two.js"></script>
+
+
+</body>
+
+</html>

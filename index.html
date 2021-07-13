@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/responsive.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav border-bottom-nav">
+
+        <!-- Login Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome back!</h3>
+                            <p>Log in to continue.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <div class="text-right pb-4">
+                                <a href="password-reset.html">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>New to codegame? <a href="#" data-toggle="modal" data-target="#signUpModal"
+                                        data-dismiss="modal">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Login Modal -->
+
+
+        <!--Sign Up  Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome!</h3>
+                            <p>Sign up to join codegame.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">First Name</label>
+                            <input type="text" class="btn-block" placeholder="Your First Name">
+                            <label for="">Last Name</label>
+                            <input type="text" class="btn-block" placeholder="Your Last Name">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <p><input type="checkbox"> Sign me up for the codegame newsletter</p>
+                            <p><input type="checkbox" checked> I agree to the <a href="#">Terms of Use</a>
+                                and have read and understand the
+                                <a href="#">Privacy Policy</a>
+                            </p>
+                            <div class="text-right pb-4">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>Already have an account? <a href="#" data-toggle="modal" data-target="#loginModal"
+                                        data-dismiss="modal">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sign Up Modal -->
+
+        <!-- Search box -->
+        <div id="myOverlay" class="overlay-search">
+            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+            <div class="overlay-content">
+                <form>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+            </div>
+        </div>
+        <!-- Search box -->
+
+        <a class="navbar-brand" href="index.html">Code Game</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Dropdown menu explore -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle rotate-class" href="index.html" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Explore <i class="fa fa-chevron-down rotate"></i>
+                    </a>
+                    <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="links-with-image py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <a href="explore-all.html">Explore All Projects
+                                            <img src="./images/dropdown_banner_2x.png" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Our Top 10 Finds
+                                            <img src="./images/dropdown 2.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Team Favorites
+                                            <img src="./images/dropdown 3.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">InDemand Stars
+                                            <img src="./images/dropdown 4.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Join the Convo
+                                            <img src="./images/dropdown 5.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-link-sec bg-gray py-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">TECH & INNOVATION</a>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <a href="#">Audio</a>
+                                                <a href="#">Camera Gear</a>
+                                                <a href="#">Education</a>
+                                                <a href="#">Energy & Green Tech</a>
+                                                <a href="#">Fashion & Wearables</a>
+                                                <a href="#">Food & Beverages</a>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#">Health & Fitness</a>
+                                                <a href="#">Home</a>
+                                                <a href="#">Phones & Accessories</a>
+                                                <a href="#">Productivity</a>
+                                                <a href="#">Transportation</a>
+                                                <a href="#">Travel & Outdoors</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">CREATIVE WORKS</a>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <a href="#">Art</a>
+                                                <a href="#">Comics</a>
+                                                <a href="#">Dance & Theater</a>
+                                                <a href="#">Film</a>
+                                                <a href="#">Music</a>
+                                                <a href="#">Photography</a>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#">Podcasts, Blogs & Vlogs</a>
+                                                <a href="#">Tabletop Games</a>
+                                                <a href="#">Video Games</a>
+                                                <a href="#">Web Series & TV Shows</a>
+                                                <a href="#">Writing & Publishing</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">COMMUNITY PROJECTS</a>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <a href="#">Culture</a>
+                                                <a href="#">Environment</a>
+                                                <a href="#">Human Rights</a>
+                                                <a href="#">Local Businesses</a>
+                                                <a href="#">Wellness</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <!-- Dropdown menu explore -->
+                <li class="nav-item">
+                    <a class="nav-link" href="what-we-do.html">What We Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link openBtn" href="#" onclick="openSearch()"><i class="fa fa-search"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="how-it-works.html">For Entrepreneurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="start-a-campaign.html">Start a Campaign</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border-left" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Slider Start -->
+    <div class="slider-sec">
+        <div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/img-1.jpg" alt="Los Angeles" height="500">
+                    <div class="img-overlay"></div>
+                    <div class="carousel-caption">
+                        <p class="title">gogopicks</p>
+                        <h5>GoSun Chillest: Solar Cooler That Doesn’t Need Ice</h5>
+                        <p>This frying pan is designed to make it easy to make professional-looking "fluffy" Omelet.</p>
+                        <a href="#">SEE CAMPAIGN</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/img-2.jpg" alt="Chicago" height="500">
+                    <div class="img-overlay"></div>
+                    <div class="carousel-caption">
+                        <p class="title-two">featured</p>
+                        <h5>Ristretto 303 FS</h5>
+                        <p>This frying pan is designed to make it easy to make professional-looking "fluffy" Omelet.</p>
+                        <a href="#">SEE CAMPAIGN</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/img-3.jpg" alt="New York" height="500">
+                    <div class="img-overlay"></div>
+                    <div class="carousel-caption">
+                        <p class="title-two">featured</p>
+                        <h5>GoSun Chillest: Solar Cooler That Doesn’t Need Ice</h5>
+                        <p>This frying pan is designed to make it easy to make professional-looking "fluffy" Omelet.</p>
+                        <a href="#">SEE CAMPAIGN</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="outer-border"><span class="carousel-control-prev-icon"></span></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="outer-border"><span class="carousel-control-next-icon"></span></span>
+            </a>
+        </div>
+        <div class="bg-white over-slider">
+            <h2>Find it first on codegame.</h2>
+            <p>codegame is where early adopters and innovation seekers find lively, imaginative tech before it hits the
+                mainstream.
+            </p>
+            <a href="#" class="btn btn-pink mr-3" data-toggle="modal" data-target="#signUpModal">sign up now</a>
+            <a href="#" class="btn btn-white">learn more</a>
+        </div>
+    </div>
+    <!-- Slider End -->
+
+    <!-- Popular Projects Sec Start-->
+    <div class="popular-projects">
+        <div class="left-right-padding">
+            <div class="popular-projects-text-button">
+                <div class="row py-4">
+                    <div class="col-lg-6">
+                        <h2>Popular Projects</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pre-next">
+                            <div class="row">
+                                <div class="col-lg-12 text-right">
+                                    <a href="#projectCarousel" data-slide="prev" class="pre-icon">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                            <i class="fa fa-chevron-left fa-stack-1x"></i>
+                                        </span>
+                                    </a>
+                                    <a href="#projectCarousel" data-slide="next" class="next-icon">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                            <i class="fa fa-chevron-right fa-stack-1x"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <a href="projects.html">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./images/pp 1.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="#" class="funding">FUNDING</a>
+                                                </div>
+                                                <div class="col-lg-6 text-right">
+                                                    <a href="#" class="save-for-later"><i class="fa fa-heart-o"></i></a>
+                                                </div>
+                                            </div>
+                                            <h6 class="card-title"><a href="#" class="title-link">
+                                                    Dusk: App-enabled electrochromic smart
+                                                </a></h6>
+                                            <p class="card-text">
+                                                Premium wayfarers packed with tech and breakthrough lens technology —
+                                                choose your tint, instantly.
+                                            </p>
+                                            <a href="#" class="project-link">FASHION & WEARABLES</a>
+                                            <div class="row pt-2">
+                                                <div class="col-lg-8">
+                                                    <p class="price">$161,036 <span>USD raised</span></p>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <p class="persentage">1,074%</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                    <span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                            <p><i class="fa fa-clock-o"></i> 24 days left</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="#">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./images/pp 2.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="#" class="funding">FUNDING</a>
+                                                </div>
+                                                <div class="col-lg-6 text-right">
+                                                    <a href="#" class="save-for-later"><i class="fa fa-heart-o"></i></a>
+                                                </div>
+                                            </div>
+                                            <h6 class="card-title"><a href="#" class="title-link">
+                                                    Dusk: App-enabled electrochromic smart
+                                                </a></h6>
+                                            <p class="card-text">
+                                                Premium wayfarers packed with tech and breakthrough lens technology —
+                                                choose your tint, instantly.
+                                            </p>
+                                            <a href="#" class="project-link">FASHION & WEARABLES</a>
+                                            <div class="row pt-2">
+                                                <div class="col-lg-8">
+                                                    <p class="price">$161,036 <span>USD raised</span></p>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <p class="persentage">1,074%</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                    <span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                            <p><i class="fa fa-clock-o"></i> 24 days left</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="#">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./images/pp 3.png" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="#" class="funding">FUNDING</a>
+                                                </div>
+                                                <div class="col-lg-6 text-right">
+                                                    <a href="#" class="save-for-later"><i class="fa fa-heart-o"></i></a>
+                                                </div>
+                                            </div>
+                                            <h6 class="card-title"><a href="#" class="title-link">
+                                                    Dusk: App-enabled electrochromic smart
+                                                </a></h6>
+                                            <p class="card-text">
+                                                Premium wayfarers packed with tech and breakthrough lens technology —
+                                                choose your tint, instantly.
+                                            </p>
+                                            <a href="#" class="project-link">FASHION & WEARABLES</a>
+                                            <div class="row pt-2">
+                                                <div class="col-lg-8">
+                                                    <p class="price">$161,036 <span>USD raised</span></p>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <p class="persentage">1,074%</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                    <span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                            <p><i class="fa fa-clock-o"></i> 24 days left</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="#">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./images/pp 4.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="#" class="funding">FUNDING</a>
+                                                </div>
+                                                <div class="col-lg-6 text-right">
+                                                    <a href="#" class="save-for-later"><i class="fa fa-heart-o"></i></a>
+                                                </div>
+                                            </div>
+                                            <h6 class="card-title"><a href="#" class="title-link">
+                                                    Dusk: App-enabled electrochromic smart
+                                                </a></h6>
+                                            <p class="card-text">
+                                                Premium wayfarers packed with tech and breakthrough lens technology —
+                                                choose your tint, instantly.
+                                            </p>
+                                            <a href="#" class="project-link">FASHION & WEARABLES</a>
+                                            <div class="row pt-2">
+                                                <div class="col-lg-8">
+                                                    <p class="price">$161,036 <span>USD raised</span></p>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <p class="persentage">1,074%</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                    <span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                            <p><i class="fa fa-clock-o"></i> 24 days left</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <a href="#">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./images/pp 5.png" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="#" class="funding">FUNDING</a>
+                                                </div>
+                                                <div class="col-lg-6 text-right">
+                                                    <a href="#" class="save-for-later"><i class="fa fa-heart-o"></i></a>
+                                                </div>
+                                            </div>
+                                            <h6 class="card-title"><a href="#" class="title-link">
+                                                    Dusk: App-enabled electrochromic smart
+                                                </a></h6>
+                                            <p class="card-text">
+                                                Premium wayfarers packed with tech and breakthrough lens technology —
+                                                choose your tint, instantly.
+                                            </p>
+                                            <a href="#" class="project-link">FASHION & WEARABLES</a>
+                                            <div class="row pt-2">
+                                                <div class="col-lg-8">
+                                                    <p class="price">$161,036 <span>USD raised</span></p>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <p class="persentage">1,074%</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                    <span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                            <p><i class="fa fa-clock-o"></i> 24 days left</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="#">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./images/pp 6.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="#" class="funding">FUNDING</a>
+                                                </div>
+                                                <div class="col-lg-6 text-right">
+                                                    <a href="#" class="save-for-later"><i class="fa fa-heart-o"></i></a>
+                                                </div>
+                                            </div>
+                                            <h6 class="card-title"><a href="#" class="title-link">
+                                                    Dusk: App-enabled electrochromic smart
+                                                </a></h6>
+                                            <p class="card-text">
+                                                Premium wayfarers packed with tech and breakthrough lens technology —
+                                                choose your tint, instantly.
+                                            </p>
+                                            <a href="#" class="project-link">FASHION & WEARABLES</a>
+                                            <div class="row pt-2">
+                                                <div class="col-lg-8">
+                                                    <p class="price">$161,036 <span>USD raised</span></p>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <p class="persentage">1,074%</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                    <span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                            <p><i class="fa fa-clock-o"></i> 24 days left</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="#">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./images/pp 7.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="#" class="funding">FUNDING</a>
+                                                </div>
+                                                <div class="col-lg-6 text-right">
+                                                    <a href="#" class="save-for-later"><i class="fa fa-heart-o"></i></a>
+                                                </div>
+                                            </div>
+                                            <h6 class="card-title"><a href="#" class="title-link">
+                                                    Dusk: App-enabled electrochromic smart
+                                                </a></h6>
+                                            <p class="card-text">
+                                                Premium wayfarers packed with tech and breakthrough lens technology —
+                                                choose your tint, instantly.
+                                            </p>
+                                            <a href="#" class="project-link">FASHION & WEARABLES</a>
+                                            <div class="row pt-2">
+                                                <div class="col-lg-8">
+                                                    <p class="price">$161,036 <span>USD raised</span></p>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <p class="persentage">1,074%</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                    <span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                            <p><i class="fa fa-clock-o"></i> 24 days left</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="#">
+                                    <div class="card">
+                                        <img class="card-img-top" src="./images/pp 8.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="#" class="funding">FUNDING</a>
+                                                </div>
+                                                <div class="col-lg-6 text-right">
+                                                    <a href="#" class="save-for-later"><i class="fa fa-heart-o"></i></a>
+                                                </div>
+                                            </div>
+                                            <h6 class="card-title"><a href="#" class="title-link">
+                                                    Dusk: App-enabled electrochromic smart
+                                                </a></h6>
+                                            <p class="card-text">
+                                                Premium wayfarers packed with tech and breakthrough lens technology —
+                                                choose your tint, instantly.
+                                            </p>
+                                            <a href="#" class="project-link">FASHION & WEARABLES</a>
+                                            <div class="row pt-2">
+                                                <div class="col-lg-8">
+                                                    <p class="price">$161,036 <span>USD raised</span></p>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <p class="persentage">1,074%</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                    <span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                            <p><i class="fa fa-clock-o"></i> 24 days left</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popular Projects Sec End-->
+
+    <!-- Big Picture Start -->
+    <div class="big-picture">
+        <div class="left-right-padding py-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="campaign-collections.html">
+                        <div class="image-img">
+                            <img src="./images/bp 1.jpg" alt="" class="w-100 image">
+                        </div>
+                        <div class="text-on-image">
+                            <h1>10 Cool & Clever Finds</h1>
+                        </div>
+                        <div class="row pb-3 pt-2">
+                            <div class="col-lg-6">
+                                <a href="#" class="caption">Our roundup of standout projects</a>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <a href="#" class="see-collection">SEE THE COLLECTION <i
+                                        class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="#">
+                        <div class="image-img">
+                            <img src="./images/bp 2.jpg" alt="" class="w-100 image">
+                        </div>
+                        <div class="text-on-image">
+                            <h1>10 Cool & Clever Finds</h1>
+                        </div>
+                        <div class="row pb-3 pt-2">
+                            <div class="col-lg-6">
+                                <a href="#" class="caption">Our roundup of standout projects</a>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <a href="#" class="see-collection">SEE THE COLLECTION <i
+                                        class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="#">
+                        <div class="image-img">
+                            <img src="./images/bp 3.png" alt="" class="w-100 image">
+                        </div>
+                        <div class="text-on-image">
+                            <h1>10 Cool & Clever Finds</h1>
+                        </div>
+                        <div class="row pb-3 pt-2">
+                            <div class="col-lg-6">
+                                <a href="#" class="caption">Our roundup of standout projects</a>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <a href="#" class="see-collection">SEE THE COLLECTION <i
+                                        class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="#">
+                        <div class="image-img">
+                            <img src="./images/bp 4.png" alt="" class="w-100 image">
+                        </div>
+                        <div class="text-on-image">
+                            <h1>Join the Conversation</h1>
+                        </div>
+                        <div class="row pb-3 pt-2">
+                            <div class="col-lg-6">
+                                <a href="#" class="caption">Our roundup of standout projects</a>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <a href="#" class="see-collection">SEE THE COLLECTION <i
+                                        class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Big Picture End -->
+
+    <!-- Back-the-project Start -->
+    <div class="back-the-project">
+        <div class="left-right-padding py-5">
+            <img src="./images/cf-bg-desktop-lg.jpg" alt="" class="w-100">
+            <div class="text-over-image">
+                <h1>Back the project, take the ride</h1>
+                <p>
+                    codegame is your destination for clever innovations in tech, design, and more, often with special
+                    perks and pricing for early adopters. Back a campaign, share your ideas and feedback with the
+                    project team - and join the risks and rewards of bringing new products to life.
+                </p>
+                <a href="what-we-do.html">LEARN ABOUT CROWDFUNDING <i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Back-the-project End -->
+
+    <!-- categories interest Start -->
+    <div class="categories-interest">
+        <div class="left-right-padding py-5 text-center">
+            <h1>Which categories interest you?</h1>
+            <p>
+                Discover projects just for you and get great recommendations when you select your interests.
+            </p>
+            <a href="#" class="btn btn-gray-outline my-3" data-toggle="modal" data-target="#signUpModal">SIGN UP AND
+                SELECT INTERESTS</a>
+            <p>Or explore our top categories</p>
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="bg-on-hover pt-3 pb-1">
+                        <a href="explore-all.html">
+                            <img src="./images/home.png" alt="">
+                            <p>home</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="bg-on-hover pt-3 pb-1">
+                        <a href="#">
+                            <img src="./images/home.png" alt="">
+                            <p>PHONES & ACCESSORIES</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="bg-on-hover pt-3 pb-1">
+                        <a href="#">
+                            <img src="./images/home.png" alt="">
+                            <p>TRAVEL & OUTDOORS</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="bg-on-hover pt-3 pb-1">
+                        <a href="#">
+                            <img src="./images/home.png" alt="">
+                            <p>HEALTH & FITNESS</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="bg-on-hover pt-3 pb-1">
+                        <a href="#">
+                            <img src="./images/home.png" alt="">
+                            <p>AUDIO</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="bg-on-hover pt-3 pb-1">
+                        <a href="#">
+                            <img src="./images/home.png" alt="">
+                            <p>FILM</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- categories interest End -->
+
+    <!-- codegame Review Start -->
+    <div class="codegame-eview">
+        <div class="left-right-padding py-5">
+            <div class="text-center py-4">
+                <h1>From the codegame Review</h1>
+                <p>
+                    Your behind-the-scenes view of the people and stories behind codegame projects
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/ir-1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h6 class="card-title">10 Campaigns That Help Moms Thrive</h6>
+                            <p class="card-text">
+                                In honor of Mother's Day, we rounded up a few campaigns that will support moms
+                                during the pandemic!
+                            </p>
+                            <a href="#" class="read-more">READ MORE <i class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/ir-2.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h6 class="card-title">10 Campaigns That Help Moms Thrive</h6>
+                            <p class="card-text">
+                                In honor of Mother's Day, we rounded up a few campaigns that will support moms
+                                during the pandemic!
+                            </p>
+                            <a href="#" class="read-more">READ MORE <i class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/ir-3.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h6 class="card-title">10 Campaigns That Help Moms Thrive</h6>
+                            <p class="card-text">
+                                In honor of Mother's Day, we rounded up a few campaigns that will support moms
+                                during the pandemic!
+                            </p>
+                            <a href="#" class="read-more">READ MORE <i class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- codegame Review End -->
+
+    <!-- Clever Things Start -->
+    <div class="clever-things">
+        <div class="left-right-padding pb-5">
+            <div class="image-part text-center">
+                <h1>Clever Things For Curious Humans™</h1>
+                <p class="py-3">
+                    There’s no better place to start the hunt for something new and special. Begin on codegame to find
+                    clever and unconventional things that solve everyday problems large and small.
+                </p>
+                <a href="#" class="btn btn-pink mr-3" data-toggle="modal" data-target="#signUpModal">sign up now</a>
+                <a href="#" class="btn btn-white">learn more</a>
+            </div>
+        </div>
+    </div>
+    <!-- Clever Things End -->
+
+    <!-- Footer Start -->
+    <div class="footer-sec bg-gray">
+        <div class="left-right-padding py-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>EXPLORE</h6>
+                    <a href="what-we-do.html">What We Do</a>
+                    <a href="#">Funding</a>
+                    <a href="#">GoFundMe</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ABOUT</h6>
+                    <a href="about-us.html">About Us</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="#">Trust & Safety</a>
+                    <a href="help-and-support.html">Help & Support</a>
+                    <a href="#">Press</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ENTREPRENEURS</h6>
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="#">codegame vs. Kickstarter</a>
+                    <a href="#">Education Center</a>
+                    <a href="#">Experts Directory</a>
+                    <a href="#">Fees</a>
+                    <a href="#">Enterprise</a>
+                    <a href="#">China</a>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                    <div class="text-center">
+                        <img src="./images/leter.png" alt="">
+                        <h5>Find it first on codegame</h5>
+                        <p>Discover new and clever products in the codegame newsletter</p>
+                        <input type="text" placeholder="Your email address" class="btn-block">
+                    </div>
+                    <div class="text-left">
+                        <p class="py-2"><input type="checkbox"> I agree to the
+                            <a href="#" class="terms-policy">Terms of Use</a> and have read and understand the
+                            <a href="#" class="terms-policy">Privacy Policy.</a>
+                        </p>
+                        <a href="#" class="btn btn-pink">sign up now</a>
+                    </div>
+                </div>
+                <div class="col-lg-12 py-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-gray-outline px-4" data-toggle="modal"
+                        data-target="#currencyModal">
+                        Select Currency
+                    </button>
+
+                    <a href="#" class="social-links"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-linkedin"></i></a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="currencyModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Currency Settings</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Changing the currency will allow you to view estimates of the campaign goal and
+                                        contribution amounts in the currency you choose.
+                                        <br><br>
+                                        You will still be charged in the campaign’s original currency. The amount
+                                        charged by your card issuer in your local currency may differ from our estimate,
+                                        based on their exchange rate and any applicable fees.
+                                    </p>
+                                    <select>
+                                        <option>UAE Dirham (AED)</option>
+                                        <option>$ US Dollar (USD)</option>
+                                        <option>Do not convert currency</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-white  mr-3" data-dismiss="modal">Cancel</a>
+                                    <a href="#" class="btn btn-pink px-4">Save</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                    <div class="text-right">
+                        <a href="#" class="policy-links">Terms of Use</a>
+                        <a href="#" class="policy-links">Privacy Policy</a>
+                        <a href="#" class="policy-links">Cookie Policy</a>
+                        <a href="#" class="policy-links disabled">© <span id="year"></span>
+                            codegame, Inc. All RightsReserved
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

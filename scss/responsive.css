@@ -1,0 +1,137 @@
+@media only screen and (max-width: 1024px) {
+  .over-slider {
+    width: 512px;
+    padding: 60px 60px 70px 54px; }
+
+  .carousel-caption {
+    bottom: 50px;
+    width: 40%; }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    padding-bottom: 95px; }
+
+  .big-picture .text-on-image {
+    top: 42%; }
+    .big-picture .text-on-image h1 {
+      font-size: 2rem; }
+
+  .back-the-project .text-over-image {
+    top: 47%; }
+  .back-the-project h1 {
+    font-size: 2rem; } }
+@media only screen and (max-width: 768px) {
+  .navbar .border-left {
+    border-left: none !important; }
+
+  .over-slider {
+    width: 400px;
+    padding: 60px 60px 60px 55px; }
+    .over-slider h2 {
+      font-size: 1.5rem; }
+
+  .big-picture .text-on-image {
+    left: 37%; }
+  .big-picture .text-right {
+    text-align: left !important; }
+
+  .back-the-project img {
+    height: fit-content; }
+  .back-the-project .text-over-image {
+    left: 49%; }
+  .back-the-project h1 {
+    font-size: 1.6rem; }
+
+  .password-reset {
+    text-align: center; }
+    .password-reset h1 {
+      font-size: 1.6rem; } }
+@media only screen and (max-width: 600px) {
+  #signUpModal .px-5,
+  #loginModal .px-5 {
+    padding-right: 0rem !important;
+    padding-left: 0rem !important; }
+
+  .over-slider {
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    padding: 60px 40px;
+    text-align: center; }
+    .over-slider h2 {
+      font-size: 1.5rem; }
+
+  .carousel-inner {
+    top: 350px; }
+
+  .carousel-caption {
+    width: 80%; }
+    .carousel-caption a {
+      z-index: 1; }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    bottom: -250px;
+    padding-bottom: 0px; }
+
+  .carousel-control-next {
+    left: 70px;
+    z-index: 1000; }
+
+  .carousel-control-prev {
+    left: 20px;
+    z-index: 1000; }
+
+  .carousel-inner img {
+    width: -webkit-fill-available; }
+
+  .big-picture .text-on-image {
+    left: 37%; }
+  .big-picture .text-right {
+    text-align: left !important; }
+
+  .popular-projects {
+    padding-bottom: 340px; }
+    .popular-projects .popular-projects-text-button {
+      position: relative;
+      top: 350px;
+      z-index: 1; }
+
+  .back-the-project img {
+    height: fit-content; }
+  .back-the-project .text-over-image {
+    left: 49%; }
+  .back-the-project h1 {
+    font-size: 1.3rem; }
+  .back-the-project p {
+    font-size: 12px; }
+  .back-the-project a {
+    font-size: 14px; }
+
+  .what-we-do-main {
+    position: relative; }
+    .what-we-do-main .text-on-image {
+      top: 80px;
+      left: 0%;
+      transform: none;
+      padding: 0px 20px; }
+      .what-we-do-main .text-on-image h1 {
+        font-size: 2rem;
+        padding-bottom: 10px; }
+
+  .youtube-video-sec h1 {
+    font-size: 1.6rem; }
+
+  .great-finds-sec input {
+    margin-bottom: 10px; }
+
+  .Ready-explore .border-left {
+    border-left: none !important; }
+
+  .slider-two .over-slider {
+    padding: 40px 20px; }
+
+  .dream-it {
+    padding-top: 375px; } }
+
+/*# sourceMappingURL=responsive.css.map */

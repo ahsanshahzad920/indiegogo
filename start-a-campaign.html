@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/responsive.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav border-bottom-nav">
+
+        <!-- Login Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome back!</h3>
+                            <p>Log in to continue.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <div class="text-right pb-4">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>New to codegame? <a href="#" data-toggle="modal" data-target="#signUpModal"
+                                        data-dismiss="modal">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Login Modal -->
+
+
+        <!--Sign Up  Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Welcome!</h3>
+                            <p>Sign up to join codegame.</p>
+                        </div>
+                        <form class="px-5 py-3">
+                            <label for="">First Name</label>
+                            <input type="text" class="btn-block" placeholder="Your First Name">
+                            <label for="">Last Name</label>
+                            <input type="text" class="btn-block" placeholder="Your Last Name">
+                            <label for="">Email</label>
+                            <input type="text" class="btn-block" placeholder="Enter Email">
+                            <label for="">Password</label>
+                            <input type="password" class="btn-block" placeholder="Enter Pasword">
+                            <p><input type="checkbox"> Sign me up for the codegame newsletter</p>
+                            <p><input type="checkbox" checked> I agree to the <a href="#">Terms of Use</a>
+                                and have read and understand the
+                                <a href="#">Privacy Policy</a>
+                            </p>
+                            <div class="text-right pb-4">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                            <a href="#" class="btn btn-pink btn-block">Log In</a>
+                            <div class="text-center">
+                                <p class="or">Or</p>
+                            </div>
+                            <a href="#" class="btn btn-blue btn-block">Continue with facebook</a>
+                            <div class="text-center">
+                                <p class="post-permission">No posts without your permission.</p>
+                                <p>Already have an account? <a href="#" data-toggle="modal" data-target="#loginModal"
+                                        data-dismiss="modal">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sign Up Modal -->
+
+        <!-- Search box -->
+        <div id="myOverlay" class="overlay-search">
+            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+            <div class="overlay-content">
+                <form>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+            </div>
+        </div>
+        <!-- Search box -->
+
+        <a class="navbar-brand" href="index.html">Code Game</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Dropdown menu explore -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle rotate-class" href="index.html" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Explore <i class="fa fa-chevron-down rotate"></i>
+                    </a>
+                    <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="links-with-image py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <a href="explore-all.html">Explore All Projects
+                                            <img src="./images/dropdown_banner_2x.png" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Our Top 10 Finds
+                                            <img src="./images/dropdown 2.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Team Favorites
+                                            <img src="./images/dropdown 3.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">InDemand Stars
+                                            <img src="./images/dropdown 4.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <a href="#">Join the Convo
+                                            <img src="./images/dropdown 5.jpg" alt="" class="w-100 h-75">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-link-sec bg-gray py-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">TECH & INNOVATION</a>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <a href="#">Audio</a>
+                                                <a href="#">Camera Gear</a>
+                                                <a href="#">Education</a>
+                                                <a href="#">Energy & Green Tech</a>
+                                                <a href="#">Fashion & Wearables</a>
+                                                <a href="#">Food & Beverages</a>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#">Health & Fitness</a>
+                                                <a href="#">Home</a>
+                                                <a href="#">Phones & Accessories</a>
+                                                <a href="#">Productivity</a>
+                                                <a href="#">Transportation</a>
+                                                <a href="#">Travel & Outdoors</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">CREATIVE WORKS</a>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <a href="#">Art</a>
+                                                <a href="#">Comics</a>
+                                                <a href="#">Dance & Theater</a>
+                                                <a href="#">Film</a>
+                                                <a href="#">Music</a>
+                                                <a href="#">Photography</a>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <a href="#">Podcasts, Blogs & Vlogs</a>
+                                                <a href="#">Tabletop Games</a>
+                                                <a href="#">Video Games</a>
+                                                <a href="#">Web Series & TV Shows</a>
+                                                <a href="#">Writing & Publishing</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="#" class="py-3">COMMUNITY PROJECTS</a>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <a href="#">Culture</a>
+                                                <a href="#">Environment</a>
+                                                <a href="#">Human Rights</a>
+                                                <a href="#">Local Businesses</a>
+                                                <a href="#">Wellness</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <!-- Dropdown menu explore -->
+                <li class="nav-item">
+                    <a class="nav-link" href="what-we-do.html">What We Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link openBtn" href="#" onclick="openSearch()"><i class="fa fa-search"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="for-entrepreneur.html">For Entrepreneurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="start-a-campaign.html">Start a Campaign</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border-left" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+
+    <!-- Welcome to codegame -->
+    <div class="welcome-to-codegame">
+        <div class="container py-5">
+            <div class="row text-center">
+                <div class="col-lg-10 offset-lg-1">
+                    <img src="./images/start-a-campaign.png" alt="" class="pb-4">
+                    <h1>Welcome to codegame</h1>
+                    <h5>What are you crowdfunding for?</h5>
+                    <div class="row pt-5">
+                        <div class="col-lg-6 pb-3">
+                            <a href="#">
+                                <div class="card py-4">
+                                    <div class="card-body">
+                                        <h1>A project</h1>
+                                        <p>
+                                            codegame is a crowdfunding platform helping entrepreneurial ideas come to
+                                            life.
+                                        </p>
+                                        <p>5% platform fee
+                                            <span class="fa-stack">
+                                                <i class="fa fa-circle fa-stack-2x"></i>
+                                                <i class="fa fa-question fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </p>
+                                        <a href="#"><img src="./images/codegame.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 pb-3">
+                            <a href="#">
+                                <div class="card py-4">
+                                    <div class="card-body">
+                                        <h1>A cause</h1>
+                                        <p>
+                                            GoFundMe is the world's largest and most trusted free social fundraising
+                                            platform.
+                                        </p>
+                                        <p>0% platform fee
+                                            <span class="fa-stack">
+                                                <i class="fa fa-circle fa-stack-2x"></i>
+                                                <i class="fa fa-question fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </p>
+                                        <a href="#"><img src="./images/gofundme.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Welcome to codegame -->
+
+
+
+
+    <!-- Footer Start -->
+    <div class="footer-sec bg-gray">
+        <div class="left-right-padding py-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>EXPLORE</h6>
+                    <a href="what-we-do.html">What We Do</a>
+                    <a href="#">Funding</a>
+                    <a href="#">GoFundMe</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ABOUT</h6>
+                    <a href="#">About Us</a>
+                    <a href="#">Trust & Safety</a>
+                    <a href="#">Help & Support</a>
+                    <a href="#">Press</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h6>ENTREPRENEURS</h6>
+                    <a href="#">codegame vs. Kickstarter</a>
+                    <a href="#">Education Center</a>
+                    <a href="#">Experts Directory</a>
+                    <a href="#">Fees</a>
+                    <a href="#">Enterprise</a>
+                    <a href="#">China</a>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                    <div class="text-center">
+                        <img src="./images/leter.png" alt="">
+                        <h5>Find it first on codegame</h5>
+                        <p>Discover new and clever products in the codegame newsletter</p>
+                        <input type="text" placeholder="Your email address" class="btn-block">
+                    </div>
+                    <div class="text-left">
+                        <p class="py-2"><input type="checkbox"> I agree to the
+                            <a href="#" class="terms-policy">Terms of Use</a> and have read and understand the
+                            <a href="#" class="terms-policy">Privacy Policy.</a>
+                        </p>
+                        <a href="#" class="btn btn-pink">sign up now</a>
+                    </div>
+                </div>
+                <div class="col-lg-12 py-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-gray-outline px-4" data-toggle="modal"
+                        data-target="#currencyModal">
+                        Select Currency
+                    </button>
+
+                    <a href="#" class="social-links"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="social-links"><i class="fa fa-linkedin"></i></a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="currencyModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Currency Settings</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Changing the currency will allow you to view estimates of the campaign goal and
+                                        contribution amounts in the currency you choose.
+                                        <br><br>
+                                        You will still be charged in the campaign’s original currency. The amount
+                                        charged by your card issuer in your local currency may differ from our estimate,
+                                        based on their exchange rate and any applicable fees.
+                                    </p>
+                                    <select>
+                                        <option>UAE Dirham (AED)</option>
+                                        <option>$ US Dollar (USD)</option>
+                                        <option>Do not convert currency</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-white  mr-3" data-dismiss="modal">Cancel</a>
+                                    <a href="#" class="btn btn-pink px-4">Save</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                    <div class="text-right">
+                        <a href="#" class="policy-links">Terms of Use</a>
+                        <a href="#" class="policy-links">Privacy Policy</a>
+                        <a href="#" class="policy-links">Cookie Policy</a>
+                        <a href="#" class="policy-links disabled">© <span id="year"></span>
+                            codegame, Inc. All RightsReserved
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

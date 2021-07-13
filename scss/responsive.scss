@@ -1,0 +1,289 @@
+// IPAD PRO
+@media only screen and (max-width: 1024px) {
+
+    // Carousel Slider
+    .over-slider {
+        width  : 512px;
+        padding: 60px 60px 70px 54px;
+    }
+
+    .carousel-caption {
+        bottom: 50px;
+        width : 40%;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        padding-bottom: 95px;
+    }
+
+    // Carousel Slider
+    // big-picture Sec
+    .big-picture {
+
+        .text-on-image {
+            top: 42%;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    // big-picture Sec
+
+    // back-the-project
+    .back-the-project {
+
+        .text-over-image {
+            top: 47%;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    // back-the-project
+}
+
+// IPAD PRO
+
+
+
+
+
+// IPAD
+@media only screen and (max-width: 768px) {
+
+    .navbar {
+        .border-left {
+            border-left: none !important;
+        }
+    }
+
+    // Carousel Slider
+    .over-slider {
+        width  : 400px;
+        padding: 60px 60px 60px 55px;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    // Carousel Slider
+
+    // big-picture Sec
+    .big-picture {
+
+        .text-on-image {
+            left: 37%;
+        }
+
+        .text-right {
+            text-align: left !important;
+        }
+    }
+
+    // big-picture Sec
+
+    // back-the-project
+    .back-the-project {
+        img {
+            height: fit-content;
+        }
+
+        .text-over-image {
+            left: 49%;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+        }
+    }
+
+    // back-the-project
+
+    // password-reset
+    .password-reset {
+        text-align: center;
+        h1{
+            font-size: 1.6rem;
+        }
+    }
+
+    // password-reset
+}
+
+// IPAD
+
+
+
+
+// Mobile
+@media only screen and (max-width: 600px) {
+
+    // login Modal
+    #signUpModal,
+    #loginModal {
+        .px-5 {
+            padding-right: 0rem !important;
+            padding-left : 0rem !important;
+        }
+    }
+
+    // login Modal
+
+
+
+    // Carousel Slider
+    .over-slider {
+        position  : absolute;
+        top       : -1px;
+        width     : 100%;
+        padding   : 60px 40px;
+        text-align: center;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .carousel-inner {
+        top: 350px;
+    }
+
+    .carousel-caption {
+        width: 80%;
+
+        a {
+            z-index: 1;
+        }
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        bottom        : -250px;
+        padding-bottom: 0px;
+    }
+
+    .carousel-control-next {
+        left   : 70px;
+        z-index: 1000;
+    }
+
+    .carousel-control-prev {
+        left   : 20px;
+        z-index: 1000;
+    }
+
+    .carousel-inner img {
+        width: -webkit-fill-available;
+    }
+
+    // Carousel Slider
+
+    // big-picture Sec
+    .big-picture {
+
+        .text-on-image {
+            left: 37%;
+        }
+
+        .text-right {
+            text-align: left !important;
+        }
+    }
+
+    // big-picture Sec
+
+    // popular-projects
+
+    .popular-projects {
+        padding-bottom: 340px;
+
+        .popular-projects-text-button {
+            position: relative;
+            top     : 350px;
+            z-index : 1;
+        }
+
+    }
+
+    // popular-projects
+
+    // back-the-project
+    .back-the-project {
+        img {
+            height: fit-content;
+        }
+
+        .text-over-image {
+            left: 49%;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        a {
+            font-size: 14px;
+        }
+    }
+
+    // back-the-project index
+
+    // what we do page
+    .what-we-do-main {
+        position: relative;
+
+        .text-on-image {
+            top      : 80px;
+            left     : 0%;
+            transform: none;
+            padding  : 0px 20px;
+
+            h1 {
+                font-size     : 2rem;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .youtube-video-sec {
+        h1 {
+            font-size: 1.6rem;
+        }
+    }
+
+    .great-finds-sec {
+        input {
+            margin-bottom: 10px;
+        }
+    }
+
+    .Ready-explore {
+        .border-left {
+            border-left: none !important;
+        }
+    }
+
+    .slider-two {
+        .over-slider {
+            padding: 40px 20px;
+        }
+    }
+
+    .dream-it {
+        padding-top: 375px;
+    }
+
+    // what we do page
+}
+
+// Mobile
